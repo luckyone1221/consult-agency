@@ -61,7 +61,7 @@ $theme-colors: map-merge(("primary": $primary,
   ),
   $theme-colors);
 
-$body-bg: #000 !default;
+$body-bg: white !default;
 $body-color: $gray-900 !default;
 
 // Typography

@@ -37,6 +37,7 @@ var JSCCommon = {
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
 		});
+		$.fancybox.defaults.backFocus = false;
 	},
 	// /magnificPopupCall
 	toggleMenu: function toggleMenu() {
@@ -167,7 +168,7 @@ function eventHandler() {
 		return false;
 	});
 	var defaultSl = {};
-	var swiper4 = new Swiper('.color-slider', _objectSpread({}, defaultSl, (_objectSpread2 = {
+	var swiper4 = new Swiper('.color-slider', _objectSpread(_objectSpread({}, defaultSl), {}, (_objectSpread2 = {
 		slidesPerView: 'auto',
 		watchOverflow: true,
 		spaceBetween: 0,
