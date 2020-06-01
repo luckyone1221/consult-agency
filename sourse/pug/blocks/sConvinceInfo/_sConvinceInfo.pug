@@ -1,0 +1,48 @@
+mixin sConvinceInfo()
+	// start sConvinceInfo
+	+b.sConvinceInfo.section#sConvinceInfo&attributes(attributes)
+		+e.section-bg-img
+			img.lazy(src="#" data-src="img/@2x/convince-info-bcgr.jpg" alt="")
+		+e.who-needs-bl
+			+e.who-needs-bl-mob-bg.d-block.d-md-none
+				img.lazy(src="#" data-src="img/@2x/convince-info-who-needs-mob-bg-big.jpg" alt="")
+				//-
+			.container
+				+e.who-needs-headline Кому нужны услуги агентства в первую очередь
+				+e.who-needs-descr Профессиональная защита бизнеса столкнувшегося с&nbsp;доначислением налогов, пеней, штрафов, угрозой уголовной ответственности по&nbsp;основаниям
+				+e.who-needs-pills
+					+whoNeedsPill('01', 'Сомнительные сделки')
+					+whoNeedsPill('02', 'Сделки с взаимозависимыми лицами')
+					+whoNeedsPill('03', 'Дробление бизнеса')
+		+e.consequences-bl
+			+e.who-needs-bl-mob-bg.d-block.d-md-none
+				img.lazy(src="#" data-src="img/@2x/convince-info-who-needs-mob-bg-big.jpg" alt="")
+			.container
+				+e.consequences-headline Последствия имеющие перспективу
+				+e.consequences-descr Не профессиональная зищита приводит к тяжелым последствиям
+				+e.consequences-pills.row
+					+consequencesPill('1', 'Потеря оборотных средстве, существенное снижение прибыли')(class="col-12 col-md-4 col-xl-part5")
+					+consequencesPill('2', 'Заморозка всех счетов, потеря бизнеса')(class="col-12 col-md-4 col-xl-part5")
+					+consequencesPill('3', 'Банкротство компании налоговой инспекцией')(class="col-12 col-md-4 col-xl-part5")
+					+consequencesPill('4', 'Субсидиарная ответственность учредителей и директоров')(class="col-12 col-md-4 offset-md-2 offset-xl-0 col-xl-part5")
+					+consequencesPill('5', 'Уголовная ответственность учредителей и директоров')(class="col-12 col-md-4 col-xl-part5")
+				+e.think-btn
+					span Мнение
+					+icon('right-chevron')
+
+
+mixin consequencesPill(imgNum='1', pillDescr='Потеря оборотных средстве, существенное снижение прибыли')
+	+e.consequences-item&attributes(attributes)
+		+e.cons-img-box
+			img.lazy(src="#" data-src=`img/consequences-pill-${imgNum}.svg` alt="")
+			.check-img-box
+				+icon('check')
+		+e.consequences-pill-descr=pillDescr
+
+mixin whoNeedsPill(pillNumber='01', pillDescr='Сомнительные сделки')
+	+e.who-needs-item
+		span.who-needs-item-number=pillNumber
+		.item-txt
+			span=pillDescr
+
+	// end sConvinceInfo

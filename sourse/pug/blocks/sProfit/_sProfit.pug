@@ -1,0 +1,28 @@
+mixin sProfit()
+	// start sProfit
+	+b.SECTION.sProfit.section#sProfit&attributes(attributes)
+		.container.text-center
+			+b.section-title.text-center
+				h2 Выгоды сотрудничества с агентством
+				p Более 30 профессиональных услуг высокого качества для эффективной и безопасной работы вашего бизнеса
+			+e.profit-row.row
+				+profitItem('1', '1', 'Более 10 лет опыта', 'Главным конкурентным преимуществом является опыт работы в финансовом консалтинге, который составляет более 10 лет, накопленный опыт дает нам огромные возможности.', '01')
+				+profitItem('1', '2', 'Высококлассные специалисты', 'Наш персонал состоит из первоклассных специалистов с перфекционистскими чертами характера, которые способны погружаться в самую глубину проблем, докапываться до сути и видеть насквозь все детали и нюансы.', '02')
+				+profitItem('1', '3', 'Обширные связи', 'Располагаем глубокими сетевыми связями с «бывшими» сотрудниками ФНС и налоговыми юристами, а так же с адвокатами умеющими хорошо защищаться от СК РФ.', '03')
+				+profitItem('1', '4', 'Более 500 млн. рублей', 'Мы всегда стоим на стороне интересов малого и среднего бизнеса. На сегодняшний день на нашем счету отбитых у налоговиков около 500 млн. рублей.', '04')
+			+e.about-us-btn
+				span О нас
+				+icon('right-chevron')
+	// end sProfit
+
+mixin profitItem(bgImgNum='1', svgImgNum='1', headlineTxt='Более 10 лет опыта', descrTxt='Главным конкурентным преимуществом является опыт работы в финансовом консалтинге, который составляет более 10 лет, накопленный опыт дает нам огромные возможности.', itemNum='01')
+	+e.profit-item-cont.col-12.col-sm-6.col-xl-3
+		+e.bg-img
+			img.lazy(src="#" data-src=`img/@2x/profit-img-${bgImgNum}.jpg` alt="#")
+		+e.A.profit-item(href="#")
+			+e.inner-img
+				img.blue-img(src=`img/profit-${svgImgNum}.svg`)
+				img.white-img(src=`img/profit-white-${svgImgNum}.svg`)
+			+e.profit-headline=headlineTxt
+			+e.P.profit-description=descrTxt
+			+e.profit-item-number=itemNum

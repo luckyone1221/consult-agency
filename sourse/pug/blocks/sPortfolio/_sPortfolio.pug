@@ -1,0 +1,33 @@
+mixin sPortfolio()
+	// start sPortfolio
+	+b.SECTION.sPortfolio.section#sPortfolio&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Портфолио
+				p Более 80 профессиональных услуг высокого качества для эффективной и безопасной работы вашего бизнеса
+			+sPortfolioSlider()
+	// end sPortfolio
+
+mixin sPortfolioSlider()
+	+b.portfolio-slider-container
+		.swiper-container.portfolio-slider-js
+			.swiper-wrapper
+				.swiper-slide
+					+sPortfolioSlide('1', 'Оспаривание результатов налоговой проверки для дистрибьютора продуктов питания', 'В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию...')
+				.swiper-slide
+					+sPortfolioSlide('2','Построение защищенной юридической структуры группы компаний', 'В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию...')
+				.swiper-slide
+					+sPortfolioSlide('3', 'Построение защищенной юридической структуры группы компаний', 'В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию...')
+				.swiper-slide
+					+sPortfolioSlide('3', 'Построение защищенной юридической структуры группы компаний_4слайд', 'В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию...')
+		.portfolio-slider-js-pugin.swiper-pugin-frame
+		+e.A.all-projects-btn(href="#")
+			span Все услуги
+			+icon('right-chevron')
+
+mixin sPortfolioSlide(imgNum='1', slideTitle='Обязательный аудит', slideDescr='В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.')
+	+e.A.img-block(href="#")
+		img.swiper-lazy(src="#" data-src=`img/@2x/portfolio-slider-${imgNum}.jpg` alt="")
+		//- .swiper-lazy(src="#" data-
+	+e.slide-title=slideTitle
+	+e.P.slide-description=slideDescr

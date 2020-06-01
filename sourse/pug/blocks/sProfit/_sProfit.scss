@@ -1,0 +1,219 @@
+// start .sProfit
+.sProfit {
+	.section-title{
+		h2{
+			margin-bottom: 10px;
+			max-width: 98%;
+			margin-left: auto;
+			margin-right: auto;
+
+			@include media-breakpoint-up(md){
+				margin-bottom: 26px;
+			}
+		}
+		p{
+			margin: auto;
+			max-width: 760px;
+			color: $body-color;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 22px;
+			margin-bottom: 34px;
+			@include media-breakpoint-up(sm){
+				line-height: 30px;
+				font-size: 20px;
+				margin-bottom: 51px;
+			}
+		}
+		padding-top: 30px;
+		@include media-breakpoint-up(sm){
+			padding-top: 47px;
+		}
+	}
+	@include media-breakpoint-up(sm){
+		padding-bottom: 20px;
+	}
+	@include media-breakpoint-up(xl){
+		padding-bottom: 60px;
+	}
+	//profit row
+	&__profit-row{
+		@include roww(20);
+	}
+	&__profit-item-cont{
+
+		margin-bottom: 20px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: 40px;
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: 45px;
+		}
+	}
+	&__bg-img{
+		//display: none;
+		background-color: $dark;
+		position: absolute;
+		left: 21px;
+		top: 1px;
+		width: calc(100% - 42px);
+		height: calc(100% - 2px);
+		z-index: -1;
+
+		img{
+			opacity: 0.5;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	//
+	&__profit-item{
+		display: block;
+		height: 100%;
+		background-color: $white-light;
+		text-decoration: none !important;
+		text-align: center;
+
+		transition: background-color .36s;
+
+		padding: 32px 18px 80px 18px;
+		@include media-breakpoint-up(sm){
+			padding: 32px 23px 80px 25px;
+		}
+		&:hover{
+			background-color: transparent;
+			.sProfit__inner-img{
+				img.blue-img{
+					opacity: 0;
+				}
+				img.white-img{
+					opacity: 1;
+				}
+			}
+			.sProfit__profit-headline{
+				color: $white;
+			}
+			.sProfit__profit-description{
+				color: $white;
+			}
+			.sProfit__{}
+			.sProfit__{}
+		}
+	}
+	&__inner-img{
+		height: 85px;
+		display: block;
+		position: relative;
+
+		margin-bottom: 13px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: 28px;
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: calc(50% - 42.5px);
+			margin: auto;
+			width: 85px;
+			height: auto;
+			max-height: 100%;
+
+			@include mt();
+			&.blue-img{
+				opacity: 1;
+			}
+			&.white-img{
+				opacity: 0;
+				//left: 0;
+			}
+		}
+	}
+	&__profit-headline{
+		display: block;
+		padding-bottom: 30px;
+		@include mt();
+
+		color: $body-color;
+		font-weight: 500;
+		line-height: 24px;
+
+		font-size: 14px;
+		@include media-breakpoint-up(sm){
+			font-size: $em-base;
+		}
+
+
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 2px;
+			background-color: $danger;
+			bottom: 15px;
+
+			left: calc(50% - 15px);
+		}
+	}
+	&__profit-description{
+		@include mt();
+		color: $secondary;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 22px;
+		margin-bottom: 25px;
+	}
+	&__profit-item-number{
+		position: absolute;
+		bottom: 30px;
+		left: calc(50% - 25px);
+		width: 50px;
+		height: 50px;
+		background-color: $white;
+		border-radius: 50%;
+
+		display: block;
+		text-align: center;
+		line-height: 50px;
+	}
+
+	//learn more btn
+
+	&__about-us-btn{
+		@extend .btn;
+		@extend .btn-danger;
+		@extend .btn-red-frame;
+
+		min-width: 131px;
+		@include media-breakpoint-up(sm){
+			min-width: 245px;
+		}
+	}
+	&__{}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sProfit

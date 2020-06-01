@@ -1,7 +1,227 @@
+// start .sForm
+.sForm {
+	position: relative;
+	color: $white;
 
-	// start .sForm
-	.sForm {
-		 
+	padding-bottom: 40px;
+	@include media-breakpoint-up(md){
+		padding-bottom: 60px;
+	}
+
+	&__section-bg{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $dark;
+		img{
+			opacity: .5;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.section-title{
+		h2{
+			color: $white;
+
+			margin-bottom: 8px;
+			@include media-breakpoint-up(md){
+				margin-bottom: 25px;
+			}
+		}
+		p{
+			color: $white;
+			max-width: 725px;
+			margin-left: auto;
+			margin-right: auto;
+
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 25px;
+			@include media-breakpoint-up(md){
+				font-size: 20px;
+				line-height: 30px;
+				margin-bottom: 51px;
+			}
+		}
+		padding-top: 36px;
+		@include media-breakpoint-up(md){
+			padding-top: 46px;
+		}
+	}
+
+
+	.form-wrap{
+		max-width: 674px;
+		margin-left: auto;
+		margin-right: auto;
+
+		&__inputs-cont{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			.form-wrap__input-wrap{
+				margin-bottom: 10px;
+				width: 100%;
+				@include media-breakpoint-up(sm){
+					width: calc(50% - 7.5px);
+					margin-bottom: 15px;
+				}
+			}
+			.form-wrap__input{
+				border-radius: 0;
+				border: none;
+				outline: none;
+				padding: 0 16px;
+
+				height: 40px;
+				line-height: 40px;
+				font-size: 14px;
+				@include media-breakpoint-up(sm){
+					height: 60px;
+					line-height: 60px;
+					font-size: 16px;
+				}
+
+				@include placeholder(){
+					color: $secondary;
+
+					font-size: 14px;
+					@include media-breakpoint-up(sm){
+						font-size: $em-base;
+					}
+				}
+			}
+		}
+
+
+		//textarea
+		&__input-wrap{
+			margin-bottom: 4px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: 14px;
+			}
+		}
+		&__input{
+			border-radius: 0;
+			border: none;
+			outline: none;
+			font-size: 14px;
+
+			height: 80px;
+			padding: 10px 10px;
+			@include media-breakpoint-up(sm){
+				height: 120px;
+				padding: 17px 13px;
+				font-size: 16px;
+			}
+
+			@include placeholder(){
+				color: $secondary;
+
+				font-size: 14px;
+				text-align: center;
+				line-height: 55px;
+				@include media-breakpoint-up(sm){
+					line-height: 1.5;
+					text-align: left;
+					font-size: $em-base;
+				}
+			}
+		}
+
+		//personalA-and-submit-cont
+		&__personalA-and-submit-cont{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+		&__personal-data-agreement{
+			cursor: pointer;
+			display: flex;
+
+			align-items: flex-start;
+			width: 100%;
+			margin-bottom: 10px;
+			@include media-breakpoint-up(sm){
+				align-items: center;
+				width: calc(50% - 7px);
+				margin-bottom: 0;
+			}
+
+			.hidden-checkbox{
+				display: none;
+			}
+			.hidden-checkbox:checked + .custom-checkbox-cont{
+				.icon{
+					opacity: 1;
+				}
+			}
+
+			.custom-checkbox-cont{
+				background-color: $white;
+
+				width: 24px;
+				height: 24px;
+				margin-right: 15px;
+				margin-top: 5px;
+				@include media-breakpoint-up(sm){
+					width: 30px;
+					height: 30px;
+					margin-right: 15px;
+					margin-top: 0px;
+				}
+				flex-shrink: 0;
+				display: flex;
+
+				.icon{
+					margin: auto;
+					color: $danger;
+					opacity: 0;
+
+					font-size: 9px;
+					@include media-breakpoint-up(sm){
+						font-size: 12px;
+					}
+					@include mt();
+				}
+			}
+			.checkbox-description{
+				max-width: 260px;
+				opacity: 0.5;
+
+				font-size: 10px;
+				line-height: 16px;
+				@include media-breakpoint-up(md){
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+		}
+
+		&__send-btn{
+			@extend .btn;
+			@extend .btn-danger;
+
+			height: 40px;
+			width: 100%;
+			@include media-breakpoint-up(sm){
+				height: 60px;
+				width: calc(50% - 7px);
+			}
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&__{}
+		&__{}
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

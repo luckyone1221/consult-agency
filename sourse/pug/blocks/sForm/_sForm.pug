@@ -1,9 +1,24 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		+e.section-bg
+			img.lazy(src='#' data-src="img/@2x/sForm-bg.jpg" alt="")
 		.container
 			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+				h2 Напишите нам
+				p Заполнив форму, вы сможете запросить коммерческое предложение, получить консультацию или заказать обратный звонок
+			+form-wrap()
+				+e.inputs-cont
+					+input('Ваше имя', 'text', undefined, 'name_inp')(required)
+					+input('Ваш e-mail', 'email', undefined, 'email_inp')(required)
+				+input('Ваше сообщение', 'textarea', undefined, 'message_ta')
+				+e.personalA-and-submit-cont
+					+e.LABEL.personal-data-agreement
+						input.hidden-checkbox(type="checkbox" checked="checked")
+						span.custom-checkbox-cont
+							+icon('check')
+						span.checkbox-description Согласен на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями
+					+e.BUTTON.send-btn(type='submit') Отправить
+
+
 	// end sForm

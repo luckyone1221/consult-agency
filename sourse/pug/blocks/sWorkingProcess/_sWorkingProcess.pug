@@ -1,0 +1,74 @@
+mixin sWorkingProcess()
+	// start sWorkingProcess
+	+b.SECTION.sWorkingProcess#sWorkingProcess&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Как мы работаем
+			+e.working-pr-bl
+				+e.working-pr-header.d-none.d-lg-flex
+					+e.header-item.active
+						+e.number-box 1
+						+e.item-txt
+							|Получаем
+							|
+							br
+							|заявку
+					+e.header-item
+						+e.number-box 2
+						+e.item-txt
+							|Анализируем
+							|
+							br
+							|ситуацию
+					+e.header-item
+						+e.number-box 3
+						+e.item-txt
+							|Организуем
+							|
+							br
+							|встречу
+					+e.header-item
+						+e.number-box 4
+						+e.item-txt
+							|Договариваемся обо всех
+							|
+							br
+							|условиях и стоимости
+					+e.header-item
+						+e.number-box 5
+						+e.item-txt
+							|Заключаем договор
+							|
+							br
+							|и входим в проект
+			+e.workinkg-pr-slider
+				.swiper-container.workinkg-pr-slider-js
+					.swiper-wrapper
+						.swiper-slide
+							+workingPrSlide('' , 1)
+						.swiper-slide
+							+workingPrSlide(2, 2)
+						.swiper-slide
+							+workingPrSlide(3, 3)
+						.swiper-slide
+							+workingPrSlide(4, 4)
+						.swiper-slide
+							+workingPrSlide(5, 5)
+				.workinkg-pr-slider-js-pugin.swiper-pugin-frame.d-block.d-md-none
+	// end sWorkingProcess
+
+mixin workingPrSlide(txtDiffer='', slideNum='1')
+	+e.working-pr-slide
+		+e.mobile-slide-num.d-block.d-lg-none=slideNum
+		+e.mobile-headline.d-block.d-lg-none= "Получаем заявку" + txtDiffer
+		+e.slide-img-block
+			img.swiper-lazy(src="#" data-src=`img/@2x/working-pr-slide-img-1.jpg` alt="")
+		+e.slide-content
+			+e.slide-headline.d-none.d-lg-block= "Получаем заявку" + slideNum
+			+e.slide-descr Обязательный аудит требуется для многих предприятий&nbsp;&mdash; полный список условий описан в&nbsp;законодательства. К&nbsp;Ним, например относятся объем выручки более 400&nbsp;млн. руб или стоимость активов за&nbsp;год более 60&nbsp;млн. Есть и&nbsp;другие случаи, когда аудит обязателен. Если ваша компания подпадает под один из&nbsp;этих критериев, позвоните нам или оставьте заявку на&nbsp;оказание услуги в&nbsp;форме обратной связи. Мы&nbsp;сможем компетентно и&nbsp;обоснованно заявить о&nbsp;правильности ведения учета и&nbsp;достоверности финансовых результатов работы.
+			+e.A.our-services-btn(href="#")
+				span Наши услуги
+				+icon('right-chevron')
+			+e.A.send-aplication-btn(href="#")
+				span Отправить заявку
+				+icon('right-chevron')

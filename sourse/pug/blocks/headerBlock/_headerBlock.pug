@@ -1,10 +1,29 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
+		block
+		+e.header-bl-slider-container
+			.header-bl-slider-js-pugin
+			.swiper-container.header-block-slider-js
+				.swiper-wrapper
+					.swiper-slide
+						+headerBlSlide('Налоговое консультирование и правовые услуги')
+					.swiper-slide
+						+headerBlSlide('Налоговое консультирование и правовые услуги 2')
+					.swiper-slide
+						+headerBlSlide('Налоговое консультирование и правовые услуги 3')
+					.swiper-slide
+						+headerBlSlide('Налоговое консультирование и правовые услуги 4')
+		+e.A.our-service-btn.d-none.d-lg-block(href="#")
+			span Наши услуги
+			+icon('down-arrow')
 						
 	// end headerBlock
+
+mixin headerBlSlide(slideTitle='Налоговое консультирование и правовые услуги', slideDescr='Первый шаг к вашей безопасности')
+	+e.slide-container
+		+e.slide-title=slideTitle
+		+e.slide-descr=slideDescr
+		+e.learn-more-btn
+			span Узнать больше
+			+icon('right-chevron')

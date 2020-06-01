@@ -19,14 +19,17 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
+$border-color: #dedede;
+$coffee-milk: #f9f5f2;
+
 $grays: () !default;
 
 
-$blue: #007bff !default;
+$blue: #1d4d80 !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
-$red: #dc3545 !default;
+$red: #f82647 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
 $green: #28a745 !default;
@@ -39,13 +42,14 @@ $colors: map-merge((), $colors);
 
 
 $primary: $blue !default;
-$secondary: $gray-600 !default;
+$secondary: #7b7b7d !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
-$danger: green !default;
-$light: $gray-100 !default;
-$dark: $gray-800 !default;
+$danger: $red !default;
+$light: #f4f4f4 !default;
+$white-light: #fafafa !default;
+$dark: #151521 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -62,7 +66,7 @@ $theme-colors: map-merge(("primary": $primary,
   $theme-colors);
 
 $body-bg: white !default;
-$body-color: $gray-900 !default;
+$body-color: #1b1b1f !default;
 
 // Typography
 //
@@ -99,7 +103,7 @@ $grid-breakpoints: (xs: 0,
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  // xxl: 1400px
+  xxl: 1500px
 ) !default;
 
 // Grid containers
@@ -111,7 +115,7 @@ $container-max-widths: (xs: 480px,
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  // xxl: 1340px
+  xxl: 1300px
 ) !default;
 // Grid columns
 //

@@ -1,0 +1,29 @@
+mixin sFAQ()
+	// start sFAQ
+	+b.SECTION.sFAQ.section#sFAQ&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 FAQ
+				p Более 80 профессиональных услуг высокого качества для эффективной и безопасной работы вашего бизнеса
+			.row
+				.col-12.col-lg-6
+					+FAQItem('Соответствует насущным потребностям?', '1')
+					+FAQItem('С другой стороны консультация с широким активом?', '')
+					+FAQItem('Соответствует насущным потребностям?', '5')
+					+FAQItem('С другой стороны консультация с широким активом?', '7')
+				.col-12.col-lg-6
+					+FAQItem('Соответствует насущным потребностям?', '2')
+					+FAQItem('С другой стороны консультация с широким активом?', '4')
+					+FAQItem('При создании генератора мы использовали небезизвестный универсальный код речей?', '6')
+					+FAQItem('С другой стороны консультация с широким активом?', '8')
+	// end sFAQ
+
+mixin FAQItem(itemQuestion='Соответствует насущным потребностям?', itemResponse='')
+	+e.faq-item-cont
+		+e.faq-item-headline
+			+e.item-question=itemQuestion
+			+e.icon-box
+				+icon('down-arrow')
+				+icon('close')
+		+e.responce-bl= 'В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.' + itemResponse
+			//itemResponse

@@ -1,5 +1,17 @@
 "use strict";
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -115,12 +127,12 @@ function eventHandler() {
 
 	svg4everybody({});
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tabs');
-	JSCCommon.mobileMenu();
+	JSCCommon.tabscostume('tabs'); //JSCCommon.mobileMenu();
+
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main-menu-agency.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -154,10 +166,9 @@ function eventHandler() {
 		}
 	}
 
-	$(window).resize(function () {
-		heightses();
-	});
-	heightses(); // листалка по стр
+	$(window).resize(function () {//heightses();
+	}); //heightses();
+	// листалка по стр
 
 	$(" .top-nav li a, .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
@@ -234,7 +245,311 @@ function eventHandler() {
 				// yaCounter55828534.reachGoal('zakaz');
 			}, 4000);
 		}).fail(function () {});
+	}); //header block
+	//header
+
+	$('.search-btn-js, .close-desctop-search-js').click(function () {
+		$('.desctop-search-js').toggleClass('active');
 	});
+	$('.burger-js').click(function () {
+		$('.burger-js, .header, .mob-menu-js').toggleClass('active');
+		document.body.classList.toggle('fixed');
+	}); //menu fix
+
+	window.addEventListener('resize', function () {
+		if (window.matchMedia("(min-width: 1200px)").matches) {
+			//fix search visiable
+			$('.desctop-search-js').removeClass('active'); //hide mob menu
+
+			$('.burger-js, .header, .mob-menu-js').removeClass('active');
+			document.body.classList.remove('fixed');
+		}
+	}, {
+		passive: true
+	}); //calculate triangle left and headersubMenuJs for desktop
+
+	function calculateTiangleLeft() {
+		var menuItem = this;
+		var triangle = menuItem.querySelector('.menu-hover-popup-triangle');
+		if (!triangle) return;
+		var menuItemLeft = menuItem.offsetLeft;
+		var menuItemWidth = menuItem.offsetWidth;
+		var triangleWidth = triangle.offsetWidth;
+		var triangleLeft = menuItemLeft + menuItemWidth / 2 - triangleWidth / 2;
+		triangle.style.left = triangleLeft + 'px';
+	}
+
+	var _closeItself;
+
+	$('.header-menu > li').click(function () {
+		var subMenuPopup = this.querySelector('.menu-hover-popup');
+		if (!subMenuPopup) return; //
+
+		var crossBtn = event.target.closest('.cross-btn-sub-menu-js');
+
+		if (crossBtn) {
+			$('.header-menu > li .menu-hover-popup').removeClass('active');
+			$('.header-menu > li > a').removeClass('active');
+			return;
+		} //we will need this later
+
+
+		event.preventDefault();
+		event.stopPropagation(); //close menu other popups
+
+		$('.header-menu > li .menu-hover-popup').removeClass('active');
+		$('.header-menu > li > a').removeClass('active'); //open curr popup
+
+		subMenuPopup.classList.add('active');
+		var thisLink = this.parentElement.querySelectorAll('.header-menu > li > a')[$(this).index()];
+		thisLink.classList.add('active'); //close popup on missclick
+		//close popup on missclick
+		//remove old listener
+
+		document.body.removeEventListener('click', _closeItself);
+
+		_closeItself = function closeItself() {
+			//remove old listener (for case we will close popup)
+			document.body.removeEventListener('click', _closeItself);
+			/*
+			 if we didnt missclick nothing happens
+			(we get in loop, we removed event listeners but clicked inside pop up it means on "this")
+			*/
+
+			if (event.target.closest('.menu-hover-popup')) return; //we missclicked close curr popup
+
+			subMenuPopup.classList.remove('active');
+			thisLink.classList.remove('active');
+		};
+
+		document.body.addEventListener('click', _closeItself); //put triangle on its place
+
+		calculateTiangleLeft.call(this);
+	}); //mob sub menu js
+
+	$('.mob-menu > li').click(function () {
+		var subMenu = this.querySelector('.mob-menu-sub-menu'); //let clickOnHeadline = event.target.closest('.sub-menu-box-mob-js');
+
+		if (!subMenu) return;
+		event.preventDefault(); //close all early opened
+
+		$('.mob-menu > li > a').removeClass('active');
+		$('.mob-menu > li .mob-menu-sub-menu').slideUp(function () {
+			$(this).removeClass('active');
+		}); //toggle current
+
+		var thisLink = this.parentElement.querySelectorAll('.mob-menu > li > a')[$(this).index()];
+
+		if (subMenu.classList.contains('active')) {
+			$(subMenu).slideUp(function () {
+				$(this).removeClass('active');
+			});
+			$(thisLink).removeClass('active');
+		} else {
+			$(subMenu).slideDown(function () {
+				$(this).addClass('active');
+			});
+			$(thisLink).addClass('active');
+		} //
+
+	}); //
+
+	window.addEventListener('scroll', setHeaderFixed, {
+		passive: true
+	});
+
+	function setHeaderFixed() {
+		if ($(window).scrollTop() > window.innerHeight) {
+			$('header.header').addClass('fixed');
+		} else {
+			$('header.header').removeClass('fixed');
+		}
+	} //headerBl slider
+
+
+	var headerBlSlider = new Swiper('.header-block-slider-js', {
+		slidesPerView: 1,
+		//direction: 'vertical',
+		loop: true,
+		//pagination
+		autoplay: {
+			delay: 4000
+		},
+		pagination: {
+			el: $(this).find('.header-bl-slider-js-pugin'),
+			clickable: true
+		}
+	}); //sAPractice
+
+	var AllParents = document.querySelectorAll('.agency-practice-slider-container');
+
+	for (var _i = 0, _Object$entries = Object.entries(AllParents); _i < _Object$entries.length; _i++) {
+		var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
+				index = _Object$entries$_i[0],
+				parent = _Object$entries$_i[1];
+
+		var ApracticeSlider = new Swiper($(parent).find('.agency-practice-sw-cont-js'), {
+			loop: true,
+			slidesPerView: 'auto',
+			//lazy load
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 5
+			},
+			//pugin
+			pagination: {
+				el: $(parent).find('.APractice-slider-js-pugin'),
+				clickable: true
+			} //autoplay
+			//autoplay: {
+			//	delay: 5000,
+			//},
+
+		});
+	}
+
+	var activeTabIndex = $('.sAgencyPractice__tabs-bar-item.active').index();
+	$('.sAgencyPractice__tabs-bar-item').click(function () {
+		if (this.classList.contains('active')) return;
+		activeTabIndex = $(this).index();
+		var thisSwiper = AllParents[activeTabIndex].querySelector('.agency-practice-sw-cont-js');
+		window.setTimeout(function () {
+			thisSwiper.swiper.update();
+		}, 50);
+	}); //sOurExp
+
+	var ourExpSlider = new Swiper($('.our-exp-slider-container').find('.our-exp-sw-cont-js'), {
+		loop: true,
+		slidesPerView: 'auto',
+		//lazy load
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5
+		},
+		//pugin
+		pagination: {
+			el: $(this).find('.OExp-slider-js-pugin'),
+			clickable: true
+		} //autoplay
+		//autoplay: {
+		//	delay: 5000,
+		//},
+
+	}); //sPortfolio
+
+	var portfolioSlider = new Swiper($('.portfolio-slider-container').find('.portfolio-slider-js'), {
+		loop: true,
+		slidesPerView: 'auto',
+		//lazy load
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5
+		},
+		//pugin
+		pagination: {
+			el: $(this).find('.portfolio-slider-js-pugin'),
+			clickable: true
+		} //autoplay
+		//autoplay: {
+		//	delay: 5000,
+		//},
+
+	}); //sSpecials
+
+	var specialSlider = new Swiper('.special-swiper-js', {
+		loop: true,
+		//breakpoints
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 0
+			},
+			996: {
+				slidesPerView: 2,
+				spaceBetween: 31
+			}
+		},
+		//pugin
+		pagination: {
+			el: $(this).find('.special-slider-pugin'),
+			clickable: true
+		}
+	}); //sResult
+
+	var resultSlider = new Swiper('.result-slider-js', {
+		loop: true,
+		navigation: {
+			nextEl: '.result-slider-next',
+			prevEl: '.result-slider-prev'
+		}
+	}); //bg js
+
+	window.addEventListener('resize', setSResultBgSize, {
+		passive: true
+	});
+	window.setTimeout(setSResultBgSize, 4000);
+
+	function setSResultBgSize() {
+		if (window.matchMedia("(max-width: 992px)").matches) {
+			var sectionH = $('.sResult').outerHeight();
+			var blackSecionH = $('.sResult__ten-plus-col').outerHeight();
+			$('.sResult__bg-img-block').css({
+				height: sectionH - blackSecionH + 'px'
+			});
+		} else {
+			$('.sResult__bg-img-block').css({
+				height: "100%"
+			});
+		}
+	} //sWorkingProcess
+
+
+	var workingPrSlider = new Swiper('.workinkg-pr-slider-js', {
+		loop: true,
+		//pugin
+		pagination: {
+			el: $(this).find('.workinkg-pr-slider-js-pugin'),
+			clickable: true
+		},
+		//lazy load
+		lazy: {
+			loadPrevNext: true //loadPrevNextAmount: 5,
+
+		},
+		//bind slider to header
+		on: {
+			slideChange: function slideChange() {
+				if (workingPrSlider) {
+					//
+					var headerItemIndOfCurrSlide = document.querySelector('.sWorkingProcess__header-item').parentElement.children[workingPrSlider.realIndex];
+					setSlideEqToHeaderItem.call(headerItemIndOfCurrSlide);
+				}
+			}
+		}
+	});
+	$('.sWorkingProcess__header-item').click(setSlideEqToHeaderItem);
+
+	function setSlideEqToHeaderItem() {
+		//disable in mob devices
+		if (window.matchMedia("(max-width: 992px)").matches) return; //switch header index
+
+		$('.sWorkingProcess__header-item').removeClass('active');
+		$(this).addClass('active');
+		var currHeaderItemIndex = $(this).index(); //switch slide
+
+		if (currHeaderItemIndex !== workingPrSlider.realIndex) {
+			workingPrSlider.slideTo(currHeaderItemIndex + 1);
+		}
+	} //sFAQ
+
+
+	$('.sFAQ__faq-item-cont').click(function () {
+		this.classList.toggle('active');
+		$(this).find('.sFAQ__responce-bl').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //
+
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 	if (isIE11) {

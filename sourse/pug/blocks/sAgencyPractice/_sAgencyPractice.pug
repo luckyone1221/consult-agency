@@ -1,0 +1,73 @@
+mixin sAgencyPractice()
+	// start sAgencyPractice
+	+b.SECTION.sAgencyPractice.section-frame#sAgencyPractice&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Практика агентства
+				p Более 80 профессиональных услуг высокого качества для эффективной и безопасной работы вашего бизнеса
+			+e.practice-block-cont.tabs
+				+e.tabs-header.tabs__caption
+					+e.tabs-bar-item.tabs__btn.active
+						|Налоговый
+						|
+						br
+						|консалтинг
+					+e.tabs-bar-item.tabs__btn
+						|Финансовый
+						|
+						br
+						|консалтинг
+					+e.tabs-bar-item.tabs__btn
+						|Консалтинговые
+						|
+						br
+						|услуги
+					+e.tabs-bar-item.tabs__btn
+						|Правовые услуги
+					+e.tabs-bar-item.tabs__btn
+						|HR консалтинг
+					+e.tabs-bar-item.tabs__btn
+						|Бухгалтерские
+						|
+						br
+						|услуги
+				+e.tabs-content.tabs__wrap
+					+e.tabs-content-item.tabs__content.active
+						+APracticeSlider('1')
+					+e.tabs-content-item.tabs__content
+						+APracticeSlider('2')
+					+e.tabs-content-item.tabs__content
+						+APracticeSlider('3')
+					+e.tabs-content-item.tabs__content
+						+APracticeSlider('4')
+					+e.tabs-content-item.tabs__content
+						+APracticeSlider('5')
+					+e.tabs-content-item.tabs__content
+						+APracticeSlider('6')
+	// end sAgencyPractice
+
+mixin APracticeSlider(silderNum)
+	+b.agency-practice-slider-container
+		.swiper-container.agency-practice-sw-cont-js
+			.swiper-wrapper
+				.swiper-slide
+					+APracticeSlide('1')
+				.swiper-slide
+					+APracticeSlide('2', 'Инициативный аудит' + silderNum, 'В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.')
+				.swiper-slide
+					+APracticeSlide('3','Бухгалтерский консалтинг' + silderNum, 'В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.')
+				.swiper-slide
+					+APracticeSlide('4', 'Независимая инвентаризация активов и обязательств' + silderNum, 'В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.')
+		.APractice-slider-js-pugin.swiper-pugin-frame
+		+e.A.all-services-btn(href="#")
+			span Все услуги
+			+icon('right-chevron')
+
+
+
+mixin APracticeSlide(imgNum='1', slideTitle='Обязательный аудит', slideDescr='В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.')
+	+e.img-block
+		img.swiper-lazy(src="#" data-src=`img/@2x/Agency-practice-${imgNum}.jpg` alt="")
+		//- .swiper-lazy(src="#" data-
+	+e.slide-title=slideTitle
+	+e.P.slide-description=slideDescr

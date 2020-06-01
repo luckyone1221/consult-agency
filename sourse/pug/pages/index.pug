@@ -2,19 +2,36 @@ extends layout/main.pug
 
 
 include ../blocks/sContent/_sContent.pug
-include ../blocks/sContact/_sContact.pug 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAgencyPractice/_sAgencyPractice.pug
+include ../blocks/sProfit/_sProfit.pug
+include ../blocks/sConvinceInfo/_sConvinceInfo.pug
+include ../blocks/sSpecials/_sSpecials.pug
+include ../blocks/sResult/_sResult.pug
+include ../blocks/sWorkingProcess/_sWorkingProcess.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sOurExperts/_sOurExperts.pug
+include ../blocks/sPortfolio/_sPortfolio.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'title'
+	- let  title= 'main page'
 	title= title
 block pagecontent 
 	//-+mob-mnu()
-	+header()
 	//- 	+top-nav()
 	//- 	+topLine()
-	+headerBlock()
+	+headerBlock()(style="background-image: url(img/@2x/header-bg.jpg);")
+		+header()
+	+sAgencyPractice()
+	+sProfit()
+	+sConvinceInfo()
+	+sSpecials()
+	+sResult()
+	+sWorkingProcess()
+	+sOurExperts()
+	+sPortfolio()
+	+sFAQ()
 	+sForm()
-	+sContact()
 	+footer()

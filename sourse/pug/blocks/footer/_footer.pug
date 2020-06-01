@@ -1,4 +1,36 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row
+				+e.social-col.col-12.col-md-6.col-xl-3
+					+e.social-icons
+						+e.A.social-item(href="#")
+							+icon('footer-soc-inst')
+						+e.A.social-item(href="#")
+							+icon('footer-soc-inst')
+						+e.A.social-item(href="#")
+							+icon('footer-soc-inst')
+						+e.A.social-item(href="#")
+							+icon('footer-soc-inst')
+					+e.all-rights.d-none.d-md-block Все права защищены, © 2020
+				+e.footer-mnu-col.col-12.col-md-6.col-xl-3
+					+e.UL.footer-menu
+						li
+							a(href="#") Запрос на оказание услуг
+						li
+							a(href="#") Обратная связь
+						li
+							a(href="#") Информационный ресурс
+						li
+							a(href="#") Контакты
+				+e.usefull-links-col.col-12.col-md-12.col-xl-6
+					+e.UL.usefull-links-list
+						li
+							a(href="#") Карта сайта
+						li
+							a(href="#") Политика ООО «ИНПАЗЛ» в отношении обработки персональных данных
+						li
+							a(href="#") Согласие посетителя веб-сайта ООО «ИНПАЗЛ»
+						li
+							a(href="#") Разработка сайта – AD HEADS
+				+e.mob-all-rights.col-12.d-block.d-md-none Все права защищены, © 2020

@@ -1,0 +1,38 @@
+mixin sOurExperts()
+	// start sOurExperts
+	+b.SECTION.sOurExperts.section#sOurExperts&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наши эксперты
+				p Более 80 профессиональных услуг высокого качества для эффективной и безопасной работы вашего бизнеса
+			+OurExpSlider()
+	// end sOurExperts
+
+mixin OurExpSlider(silderNum)
+	+b.our-exp-slider-container
+		.swiper-container.our-exp-sw-cont-js
+			.swiper-wrapper
+				.swiper-slide
+					+OurExpSlide('1')
+				.swiper-slide
+					+OurExpSlide('2')
+				.swiper-slide
+					+OurExpSlide('3')
+				.swiper-slide
+					+OurExpSlide('4')
+		.OExp-slider-js-pugin.swiper-pugin-frame
+
+mixin OurExpSlide(imgNum='1', slideTitle='Обязательный аудит', slideDescr='В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.')
+	+e.A.img-block(href="#")
+		img.swiper-lazy(src="#" data-src=`img/@2x/our-exp-slider-${imgNum}.jpg` alt="")
+	+e.exp-name Кузнецов Андрей
+	+e.UL.exp-data-list
+		li
+			span Должность:
+			span Партнер
+		li
+			span Компетенции:
+			span Финансовый аудит
+		li
+			span Опыт:
+			span 12 лет
