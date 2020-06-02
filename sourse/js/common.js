@@ -172,7 +172,8 @@ function eventHandler() {
 	//heightses();
 
 	// листалка по стр
-	$(" .top-nav li a, .scroll-link").click(function () {
+	// .top-nav li a, .scroll-link
+	$(".ancor-js").click(function () {
 		const elementClick = $(this).attr("href");
 		const destination = $(elementClick).offset().top;
 
@@ -301,57 +302,21 @@ function eventHandler() {
 			let triangleLeft = menuItemLeft + (menuItemWidth / 2) - (triangleWidth / 2);
 			triangle.style.left = triangleLeft + 'px';
 	}
-	let closeItself;
-	$('.header-menu > li').click(function () {
-		let subMenuPopup = this.querySelector('.menu-hover-popup');
-		if (!subMenuPopup) return
-
-		//
-		let crossBtn = event.target.closest('.cross-btn-sub-menu-js');
-		if (crossBtn){
-			$('.header-menu > li .menu-hover-popup').removeClass('active');
-			$('.header-menu > li > a').removeClass('active');
-			return
-		}
-
-		//we will need this later
-		event.preventDefault();
-		event.stopPropagation();
-
-		//close menu other popups
-		$('.header-menu > li .menu-hover-popup').removeClass('active');
-		$('.header-menu > li > a').removeClass('active');
-
-		//open curr popup
-		subMenuPopup.classList.add('active');
-		let thisLink = this.parentElement.querySelectorAll('.header-menu > li > a')[$(this).index()];
-		thisLink.classList.add('active');
-
-		//close popup on missclick
-		//close popup on missclick
-
-		//remove old listener
-		document.body.removeEventListener('click', closeItself);
-
-		closeItself = function() {
-			//remove old listener (for case we will close popup)
-			document.body.removeEventListener('click', closeItself);
-
-			/*
-			 if we didnt missclick nothing happens
-			(we get in loop, we removed event listeners but clicked inside pop up it means on "this")
-			*/
-			if (event.target.closest('.menu-hover-popup')) return
-
-			//we missclicked close curr popup
-			subMenuPopup.classList.remove('active');
-			thisLink.classList.remove('active');
-		}
-		document.body.addEventListener('click', closeItself);
-
-		//put triangle on its place
+	//
+	$('.header-menu > li').mouseenter(function () {
 		calculateTiangleLeft.call(this);
+		$(this).addClass('hover');
 	});
+
+	$('.header-menu > li').mouseleave(function () {
+		$(this).removeClass('hover');
+	});
+
+	$('.cross-btn-sub-menu-js').click(function () {
+		let GrandParent = this.closest('.menu-hover-popup').closest('li');
+		$(GrandParent).trigger('mouseleave');
+	})
+	//
 
 	//mob sub menu js
 	$('.mob-menu > li').click(function () {
@@ -403,9 +368,9 @@ function eventHandler() {
 
 		//pagination
 
-		autoplay: {
-			delay: 4000,
-		},
+		//autoplay: {
+		//	delay: 4000,
+		//},
 		pagination: {
 			el: $(this).find('.header-bl-slider-js-pugin'),
 			clickable: true,
@@ -572,7 +537,7 @@ function eventHandler() {
 	//sFAQ
 	$('.sFAQ__faq-item-cont').click(function () {
 		this.classList.toggle('active');
-		$(this).find('.sFAQ__responce-bl').slideToggle(function () {
+		$(this).find('p').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
 	});
@@ -602,3 +567,58 @@ function eventHandler() {
 	} else {
 		document.addEventListener('DOMContentLoaded', eventHandler);
 	}
+
+/*
+let closeItself;
+$('.header-menu > li').click(function () {
+	let subMenuPopup = this.querySelector('.menu-hover-popup');
+	if (!subMenuPopup) return
+
+	//
+	let crossBtn = event.target.closest('.cross-btn-sub-menu-js');
+	if (crossBtn){
+		$('.header-menu > li .menu-hover-popup').removeClass('active');
+		$('.header-menu > li > a').removeClass('active');
+		return
+	}
+
+	//we will need this later
+	event.preventDefault();
+	event.stopPropagation();
+
+	//close menu other popups
+	$('.header-menu > li .menu-hover-popup').removeClass('active');
+	$('.header-menu > li > a').removeClass('active');
+
+	//open curr popup
+	subMenuPopup.classList.add('active');
+	let thisLink = this.parentElement.querySelectorAll('.header-menu > li > a')[$(this).index()];
+	thisLink.classList.add('active');
+
+	//close popup on missclick
+	//close popup on missclick
+
+	//remove old listener
+	document.body.removeEventListener('click', closeItself);
+
+	closeItself = function() {
+		//remove old listener (for case we will close popup)
+		document.body.removeEventListener('click', closeItself);
+
+
+		//if we didnt missclick nothing happens
+    //(we get in loop, we removed event listeners but clicked inside pop up it means on "this")
+
+		if (event.target.closest('.menu-hover-popup')) return
+
+		//we missclicked close curr popup
+		subMenuPopup.classList.remove('active');
+		thisLink.classList.remove('active');
+	}
+	document.body.addEventListener('click', closeItself);
+
+	//put triangle on its place
+	calculateTiangleLeft.call(this);
+});
+
+ */

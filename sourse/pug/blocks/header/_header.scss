@@ -59,12 +59,11 @@
 			margin-left: 105px;
 		}
 		& > li{
-			/*&:hover{
+			&.hover{
 				.menu-hover-popup{
 					left: 0;
-					//transition: left 0s ease-in-out 2s, opacity 0s ease-in-out 2s;
 				}
-			}*/
+			}
 
 			& > a{
 				//ex li margin
@@ -265,7 +264,12 @@
 					}
 				}
 			}
-			&__searh-icon-cont{
+			&__searh-btn{
+				background-color: transparent;
+				border: none;
+				outline: none;
+				box-shadow: none;
+
 				display: flex;
 				align-items: center;
 				padding-left: 45px;
@@ -584,10 +588,6 @@
 	height: auto;
 	width: 100vw;
 	padding-top: 21px;
-
-	&.active{
-		left: 0;
-	}
 }
 .menu-hover-popup-triangle{
 	position: absolute;
@@ -743,16 +743,21 @@
 //agency-mob-submenu-content
 .agency-mob-submenu-content{
 	padding: 20px;
-	&__sub-menu-items{
+	ul{
 		padding-bottom: 5px;
-		a{
-			padding-left: 10px;
-			display: block;
-			color: $body-color;
-			font-family: $default-font;
-			font-size: 14px;
-			//font-weight: 500;
-			line-height: 30px;
+		list-style: none;
+		margin: 0;
+
+		li{
+			a{
+				padding-left: 10px;
+				display: block;
+				color: $body-color;
+				font-family: $default-font;
+				font-size: 14px;
+				//font-weight: 500;
+				line-height: 30px;
+			}
 		}
 	}
 }
@@ -761,6 +766,49 @@
 
 	&__sub-menu-box{
 		padding: 20px 20px 20px 30px;
+
+		//&__sub-menu-items-list
+		& > ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			& > li{
+				padding-bottom: 5px;
+				& > a{
+					display: block;
+					color: $body-color;
+					font-family: $default-font;
+					font-size: 14px;
+					line-height: 30px;
+				}
+				//sub sub
+
+				& > ul{
+					padding: 5px 0;
+					list-style: none;
+					margin: 0;
+
+					& > li{
+						padding: 3px 0;
+						& > a{
+							display: block;
+							color: $secondary;
+							font-size: 12px;
+							line-height: 20px;
+							font-weight: 400;
+
+							&:before{
+								content: '— ';
+							}
+						}
+					}
+				}
+
+			}
+		}
+		//&__sub-menu-item
+
+
 	}
 	&__sub-menu-item-headline{
 		font-weight: 500;
@@ -781,36 +829,8 @@
 			bottom: 21px;
 		}
 	}
-	&__sub-menu-items-list{}
-	&__sub-menu-item{
-		padding-bottom: 5px;
-		a{
-			//padding-left: 10px;
-			display: block;
-			color: $body-color;
-			font-family: $default-font;
-			font-size: 14px;
-			//font-weight: 500;
-			line-height: 30px;
-		}
-	}
-	&__sub2-menu-list{
-		padding: 5px 0;
-	}
-	&__sub2-menu-item{
-		padding: 3px 0;
-		& > a{
-			display: block;
-			color: $secondary;
-			font-size: 12px;
-			line-height: 20px;
-			font-weight: 400;
 
-			&:before{
-				content: '— ';
-			}
-		}
-	}
+
 	&__{}
 	&__{}
 }

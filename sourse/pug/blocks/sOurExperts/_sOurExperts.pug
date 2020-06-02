@@ -23,16 +23,19 @@ mixin OurExpSlider(silderNum)
 		.OExp-slider-js-pugin.swiper-pugin-frame
 
 mixin OurExpSlide(imgNum='1', slideTitle='Обязательный аудит', slideDescr='В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.')
-	+e.A.img-block(href="#")
+	+e.img-block
 		img.swiper-lazy(src="#" data-src=`img/@2x/our-exp-slider-${imgNum}.jpg` alt="")
-	+e.exp-name Кузнецов Андрей
-	+e.UL.exp-data-list
+	p Кузнецов Андрей
+	ul
 		li
-			span Должность:
-			span Партнер
+			span(style='color: #7b7b7d;') Должность:
+			|
+			| Партнер
 		li
-			span Компетенции:
-			span Финансовый аудит
+			span(style='color: #7b7b7d;') Компетенции:
+			|
+			| Финансовый аудит
 		li
-			span Опыт:
-			span 12 лет
+			span(style='color: #7b7b7d;') Опыт:
+			|
+			| 12 лет

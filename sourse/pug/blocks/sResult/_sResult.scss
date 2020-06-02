@@ -87,73 +87,78 @@
 		@include media-breakpoint-up(lg){
 			padding: 54px 44px 60px 61px;
 		}
-	}
-	&__ten-plus-headline{
-		color: $white;
-		font-family: $default-font-alt;
-		line-height: 1.2;
+
+		//&__ten-plus-headline
+		h4 {
+			color: $white;
+			font-family: $default-font-alt;
+			line-height: 1.2;
 
 
-		font-size: 18px;
-		text-align: center;
-		padding-bottom: 33px;
-		padding-left: 15px;
-		padding-right: 15px;
-		@include media-breakpoint-up(sm){
-			font-size: 30px;
+			font-size: 18px;
+			text-align: center;
+			padding-bottom: 33px;
+			padding-left: 15px;
+			padding-right: 15px;
+			@include media-breakpoint-up(sm){
+				font-size: 30px;
+				text-align: left;
+				padding-bottom: 61px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				width: 45px;
+				height: 3px;
+				background-color: $danger;
+
+				bottom: 12px;
+				left: calc(50% - 22.5px);
+				@include media-breakpoint-up(sm){
+					bottom: 37px;
+					left: 0px;
+				}
+			}
+		}
+		//&__ten-plus-pills
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		//&__ten-plus-item
+		li {
+			padding-left: 13px;
 			text-align: left;
-			padding-bottom: 61px;
-			padding-left: 0px;
-			padding-right: 0px;
-		}
 
-		position: relative;
-		&:after{
-			content: '';
-			position: absolute;
-			width: 45px;
-			height: 3px;
-			background-color: $danger;
-
-			bottom: 12px;
-			left: calc(50% - 22.5px);
+			margin-bottom: 13px;
+			font-size: 14px;
+			line-height: 22px;
 			@include media-breakpoint-up(sm){
-				bottom: 37px;
-				left: 0px;
+				margin-bottom: 27px;
+				font-size: $em-base;
+				line-height: 30px;
+			}
+
+			position: relative;
+			&:before{
+				content: '•';
+				position: absolute;
+				color: $danger;
+
+				left: 3px;
+				@include media-breakpoint-up(sm){
+					left: 0;
+				}
 			}
 		}
+		//
 	}
-	//list
-	&__ten-plus-pills{
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-	&__ten-plus-item{
-		padding-left: 13px;
-		text-align: left;
 
-		margin-bottom: 13px;
-		font-size: 14px;
-		line-height: 22px;
-		@include media-breakpoint-up(sm){
-			margin-bottom: 27px;
-			font-size: $em-base;
-			line-height: 30px;
-		}
-
-		position: relative;
-		&:before{
-			content: '•';
-			position: absolute;
-			color: $danger;
-
-			left: 3px;
-			@include media-breakpoint-up(sm){
-				left: 0;
-			}
-		}
-	}
 	&__lear-more-btn{
 		@extend .btn;
 		@extend .btn-danger;
@@ -248,104 +253,110 @@
 	}
 	//slide
 	&__result-slide{
+		//&__ResSl-company-name-txt
+		h4 {
+			font-family: $default-font-alt;
+			line-height: 1.2;
+			max-width: 240px;
 
-	}
-	&__ResSl-company-name-txt{
-		font-family: $default-font-alt;
-		line-height: 1.2;
-		max-width: 240px;
+			font-size: 18px;
 
-		font-size: 18px;
-		text-align: center;
-		margin-right: auto;
-		margin-left: auto;
-		margin-bottom: 10px;
-		@include media-breakpoint-up(sm){
-			font-size: 30px;
-			text-align: left;
-			margin-right: 0;
-			margin-left: 0;
-			margin-bottom: 17px;
-		}
-	}
-	&__ResSl-company-name-descr{
-		color: $secondary;
-
-		padding-bottom: 40px;
-		font-size: 14px;
-		line-height: 22px;
-		text-align: center;
-		@include media-breakpoint-up(sm){
-			text-align: left;
-			padding-bottom: 64px;
-			font-size: $em-base;
-			line-height: 26px;
-		}
-
-		position: relative;
-		&:after{
-			content: '';
-			position: absolute;
-			width: 45px;
-			height: 3px;
-			background-color: $danger;
-
-			bottom: 22.5px;
-			left: calc(50% - 22.5px);
+			text-align: center;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 10px;
 			@include media-breakpoint-up(sm){
-				bottom: 37px;
-				left: 0px;
+				text-align: left;
+				margin-right: 0;
+				margin-left: 0;
+				margin-bottom: 17px;
+			}
+
+			@include media-breakpoint-up(md){
+				font-size: 30px;
 			}
 		}
-	}
-	&__ResSl-content{}
-	&__ResSl-content-item{
-		padding-bottom: 17px;
-		@include media-breakpoint-up(md){
-			padding-bottom: 25px;
-		}
-		@include media-breakpoint-up(md){
-			padding-bottom: 32px;
-		}
 
-		//for pp
-		&:last-child{
-			@include media-breakpoint-between(xs,sm){
-				.sResult__ResSl-item-descr{
-					position: relative;
-					margin-right: -15px;
+		//&__ResSl-company-name-descr
+		& > p{
+			margin-bottom: 0;
+			color: $secondary;
+
+			padding-bottom: 40px;
+			font-size: 14px;
+			line-height: 22px;
+			text-align: center;
+			@include media-breakpoint-up(sm){
+				text-align: left;
+				padding-bottom: 64px;
+				font-size: $em-base;
+				line-height: 26px;
+			}
+
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				width: 45px;
+				height: 3px;
+				background-color: $danger;
+
+				bottom: 22.5px;
+				left: calc(50% - 22.5px);
+				@include media-breakpoint-up(sm){
+					bottom: 37px;
+					left: 0px;
 				}
 			}
 		}
+
+
 	}
-	&__ResSl-item-headline{
-		display: block;
-		font-weight: 500;
-
-
-		font-size: 14px;
-		line-height: 26px;
-		padding-bottom: 5px;
-		@include media-breakpoint-up(sm){
+	&__slide-content{
+		//&__ResSl-content-item
+		p{
+			margin-bottom: 0;
+		}
+		P:nth-child(2n + 2){
 			padding-bottom: 17px;
-		}
-		@include media-breakpoint-up(md){
-			font-size: $em-base;
-			line-height: 26px;
-			padding-bottom: 14px;
-		}
-	}
-	&__ResSl-item-descr{
-		display: block;
+			@include media-breakpoint-up(md){
+				padding-bottom: 25px;
+			}
+			@include media-breakpoint-up(md){
+				padding-bottom: 32px;
+			}
 
-		font-size: 14px;
-		line-height: 22px;
-		@include media-breakpoint-up(md){
-			font-size: $em-base;
+		}
+
+		//&__ResSl-item-headline
+		P:nth-child(2n + 1){
+			display: block;
+			font-weight: 500;
+
+			font-size: 14px;
 			line-height: 26px;
+			padding-bottom: 5px;
+			@include media-breakpoint-up(sm){
+				padding-bottom: 17px;
+			}
+			@include media-breakpoint-up(md){
+				font-size: $em-base;
+				line-height: 26px;
+				padding-bottom: 14px;
+			}
+		}
+		//&__ResSl-item-descr
+		P:nth-child(2n + 2){
+			display: block;
+
+			font-size: 14px;
+			line-height: 22px;
+			@include media-breakpoint-up(md){
+				font-size: $em-base;
+				line-height: 26px;
+			}
 		}
 	}
-	&__{}
 	&__{}
 	&__{}
 	&__{}

@@ -29,7 +29,8 @@
 		background-color: $white-light;
 		display: flex;
 
-		justify-content: space-around;
+		//justify-content: space-around;
+		justify-content: flex-start;
 		flex-wrap: wrap;
 		@include media-breakpoint-up(xl){
 			flex-wrap: nowrap;
@@ -42,19 +43,19 @@
 
 	}
 	&__header-item{
-
+		margin-left: 20px;
+		margin-right: 20px;
 		width: calc(33% - 40px);
-		&:nth-child(n + 4){
-			width: calc(35% - 40px);
-		}
+
+
 		br{
 			display: none;
 		}
 		@include media-breakpoint-up(xl){
 			width: auto;
-			&:nth-child(n + 4){
-				width: auto;
-			}
+			margin-left: 0;
+			margin-right: 0;
+
 			br{
 				display: block;
 			}
@@ -124,7 +125,10 @@
 		font-weight: 500;
 		color: $secondary;
 
-		font-size: $em-base;
+		font-size: 14px;
+		@include media-breakpoint-up(xl){
+			font-size: $em-base;
+		}
 		line-height: 24px;
 		@include mt();
 	}
@@ -220,7 +224,33 @@
 			object-fit: cover;
 		}
 	}
-	&__slide-content{}
+	&__slide-content{
+		//&__slide-descr
+		p {
+			color: #000000;
+
+			padding-bottom: 15px;
+			position: relative;
+			margin: 0 -5px;
+			@include media-breakpoint-up(sm){
+				padding-bottom: 40px;
+				position: static;
+				margin: 0;
+			}
+
+			font-size: 12px;
+			line-height: 20px;
+			@include media-breakpoint-up(md){
+				font-size: $em-base;
+				line-height: 26px;
+			}
+
+			text-align: center;
+			@include media-breakpoint-up(lg){
+				text-align: left;
+			}
+		}
+	}
 
 	&__slide-headline{
 		font-family: $default-font-alt;
@@ -246,30 +276,7 @@
 			}
 		}
 	}
-	&__slide-descr{
-		color: #000000;
 
-		padding-bottom: 15px;
-		position: relative;
-		margin: 0 -5px;
-		@include media-breakpoint-up(sm){
-			padding-bottom: 40px;
-			position: static;
-			margin: 0;
-		}
-
-		font-size: 12px;
-		line-height: 20px;
-		@include media-breakpoint-up(md){
-			font-size: $em-base;
-			line-height: 26px;
-		}
-
-		text-align: center;
-		@include media-breakpoint-up(lg){
-			text-align: left;
-		}
-	}
 	//btns
 	&__our-services-btn{
 		@extend .btn;

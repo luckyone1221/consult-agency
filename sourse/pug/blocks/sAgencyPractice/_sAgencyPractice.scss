@@ -3,7 +3,7 @@
 	background-color: $light;
 
 	.container{
-		padding-top: 76px; //!!
+		//padding-top: 76px; //!!
 	}
 
 	.section-title{
@@ -205,6 +205,64 @@
 	}
 
 	//slide content
+	&__Apractice-slide-cont{
+		display: block;
+		height: 100%;
+		text-decoration: none !important;
+
+		//&__slide-title
+		h6 {
+			display: block;
+			color: $body-color;
+			margin-bottom: 0;
+
+			font-size: 14px;
+			line-height: 24px;
+			@include media-breakpoint-up(sm){
+				font-size: $em-base;
+				line-height: 24px;
+			}
+
+			font-weight: 500;
+			padding-bottom: 30px;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				width: 30px;
+				height: 2px;
+				background-color: $danger;
+				bottom: 15px;
+
+				left: calc(50% - 15px);
+				@include media-breakpoint-up(sm){
+					left: 0;
+				}
+			}
+
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 240px;
+			@include media-breakpoint-up(sm){
+				text-align: left;
+			}
+		}
+		//&__slide-description
+		p {
+			color: $secondary;
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 22px;
+			margin-bottom: 0;
+
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 230px;
+			@include media-breakpoint-up(sm){
+				text-align: left;
+			}
+		}
+	}
 	&__img-block{
 		display: flex;
 		//background-color: pink;
@@ -216,56 +274,14 @@
 		img{
 			margin: auto;
 			width: 240px;
-			height: 240px;
+			//height: 240px;
+			min-height: 240px;
+			height: auto;
 			object-fit: cover;
 		}
 	}
-	&__slide-title{
-		font-size: 14px;
-		line-height: 24px;
-		@include media-breakpoint-up(sm){
-			font-size: $em-base;
-			line-height: 24px;
-		}
 
-		font-weight: 500;
-		padding-bottom: 30px;
-		position: relative;
-		&:after{
-			content: '';
-			position: absolute;
-			width: 30px;
-			height: 2px;
-			background-color: $danger;
-			bottom: 15px;
 
-			left: calc(50% - 15px);
-			@include media-breakpoint-up(sm){
-				left: 0;
-			}
-		}
-
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 240px;
-		@include media-breakpoint-up(sm){
-			text-align: left;
-		}
-	}
-	&__slide-description{
-		color: $secondary;
-		font-size: 12px;
-		font-weight: 400;
-		line-height: 22px;
-		margin-bottom: 0;
-
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 230px;
-		@include media-breakpoint-up(sm){
-			text-align: left;
-		}
-	}
 	//all-services-btn
 	&__all-services-btn{
 		height: 40px;

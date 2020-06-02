@@ -14,7 +14,7 @@ mixin headerBlock()
 						+headerBlSlide('Налоговое консультирование и правовые услуги 3')
 					.swiper-slide
 						+headerBlSlide('Налоговое консультирование и правовые услуги 4')
-		+e.A.our-service-btn.d-none.d-lg-block(href="#")
+		+e.A.our-service-btn.d-none.d-lg-block.ancor-js(href="#sAgencyPractice")
 			span Наши услуги
 			+icon('down-arrow')
 						
@@ -24,6 +24,6 @@ mixin headerBlSlide(slideTitle='Налоговое консультирован�
 	+e.slide-container
 		+e.slide-title=slideTitle
 		+e.slide-descr=slideDescr
-		+e.learn-more-btn
+		+e.A.learn-more-btn(href="#")
 			span Узнать больше
 			+icon('right-chevron')

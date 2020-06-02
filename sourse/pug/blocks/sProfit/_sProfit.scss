@@ -39,6 +39,8 @@
 	//profit row
 	&__profit-row{
 		@include roww(20);
+
+		counter-reset: list 0;
 	}
 	&__profit-item-cont{
 
@@ -49,6 +51,7 @@
 		@include media-breakpoint-up(xl){
 			margin-bottom: 45px;
 		}
+
 	}
 	&__bg-img{
 		//display: none;
@@ -91,14 +94,36 @@
 					opacity: 1;
 				}
 			}
-			.sProfit__profit-headline{
+			//.sProfit__profit-headline
+			h6{
 				color: $white;
 			}
-			.sProfit__profit-description{
+			//.sProfit__profit-description
+			p{
 				color: $white;
 			}
 			.sProfit__{}
 			.sProfit__{}
+		}
+
+		//&__profit-item-number
+		list-style-type: none;
+
+		&:before{
+			counter-increment: list; /* Увеличиваем значение счетчика */
+			content: "0" counter(list); /* Выводим число */
+
+			position: absolute;
+			bottom: 30px;
+			left: calc(50% - 25px);
+			width: 50px;
+			height: 50px;
+			background-color: $white;
+			border-radius: 50%;
+
+			display: block;
+			text-align: center;
+			line-height: 50px;
 		}
 	}
 	&__inner-img{
@@ -129,7 +154,8 @@
 			}
 		}
 	}
-	&__profit-headline{
+	//&__profit-headline
+	h6{
 		display: block;
 		padding-bottom: 30px;
 		@include mt();
@@ -156,7 +182,8 @@
 			left: calc(50% - 15px);
 		}
 	}
-	&__profit-description{
+	//&__profit-description
+	p{
 		@include mt();
 		color: $secondary;
 		font-size: 12px;
@@ -164,19 +191,7 @@
 		line-height: 22px;
 		margin-bottom: 25px;
 	}
-	&__profit-item-number{
-		position: absolute;
-		bottom: 30px;
-		left: calc(50% - 25px);
-		width: 50px;
-		height: 50px;
-		background-color: $white;
-		border-radius: 50%;
 
-		display: block;
-		text-align: center;
-		line-height: 50px;
-	}
 
 	//learn more btn
 

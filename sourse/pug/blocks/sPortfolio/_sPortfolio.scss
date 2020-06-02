@@ -100,10 +100,15 @@
 		padding-left: calc(50% - 140px);
 		padding-right: calc(50% - 140px);
 		@include media-breakpoint-up(sm){
-			width: 33.33%;
-			min-width: 330px;
+			//min-width: 330px;
+			width: 25%;
+			min-width: 300px;
 			padding-left: 30px;
 			padding-right: 30px;
+		}
+
+		@include media-breakpoint-up(xl){
+			width: 33.33%;
 		}
 
 		position: relative;

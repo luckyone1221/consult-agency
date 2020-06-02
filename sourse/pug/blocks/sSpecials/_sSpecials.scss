@@ -51,7 +51,9 @@
 			//fade slide
 			&.gray-fade{
 				//header
-				.sSpecials__slide-header{
+
+				//.sSpecials__slide-header
+				h5{
 					color: #a4a4a5;
 					&:after{
 						background-color: #a4a4a5;
@@ -59,7 +61,8 @@
 				}
 				//
 				.sSpecials__special-pills-item{
-					.icon{
+					//.icon
+					&:before{
 						color: #a4a4a5;
 					}
 				}
@@ -78,7 +81,9 @@
 		}
 
 	}
-	&__slide-header{
+	//&__slide-header
+	h5{
+		margin-bottom: 0;
 		background-color: $white-light;
 		font-family: $default-font-alt;
 		line-height: 1;
@@ -147,6 +152,7 @@
 			border-bottom: none;
 		}
 
+		/*
 		.icon{
 			color: $blue;
 
@@ -155,14 +161,25 @@
 				font-size: 30px;
 			}
 		}
-		.pill-txt{
+		*/
+		&:before{
+			content: '✓';
+			color: $blue;
+
+			font-size: 18px;
+			@include media-breakpoint-up(sm){
+				font-size: 30px;
+			}
+		}
+		//.pill-txt
+		p{
+			margin-bottom: 0;
 			margin-left: auto;
 			text-align: left;
+			padding: 10px 0;
 
 			width: calc(100% - 32px);
-			padding: 10px 0;
 			@include media-breakpoint-up(sm){
-				padding: 0px 0;
 				width: calc(100% - 50px);
 			}
 

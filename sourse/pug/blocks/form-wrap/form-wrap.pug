@@ -13,7 +13,9 @@ mixin input(placeholder,  t='text', label, name= t)
 				- for (var x = 1; x < 5; x++)
 					option(value=` placeholder ${x}`)= `placeholder ${x}`
 		else
-			+e.INPUT.input.form-control(type= t placeholder= (t != 'file' ? placeholder : null) step=(t == "number" ? 'any' : null) name= name)&attributes(attributes)
+			+e.INPUT.input.form-control(type= t placeholder= (t != 'file' ? placeholder : null)  name= name)&attributes(attributes)
+			//-step=(t == "number" ? 'any' : null)
+			//-before name
 	+e.input-wrap.form-group
 		if label
 			label

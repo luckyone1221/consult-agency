@@ -9,11 +9,11 @@ mixin sConvinceInfo()
 				//-
 			.container
 				+e.who-needs-headline Кому нужны услуги агентства в первую очередь
-				+e.who-needs-descr Профессиональная защита бизнеса столкнувшегося с&nbsp;доначислением налогов, пеней, штрафов, угрозой уголовной ответственности по&nbsp;основаниям
-				+e.who-needs-pills
-					+whoNeedsPill('01', 'Сомнительные сделки')
-					+whoNeedsPill('02', 'Сделки с взаимозависимыми лицами')
-					+whoNeedsPill('03', 'Дробление бизнеса')
+				p Профессиональная защита бизнеса столкнувшегося с&nbsp;доначислением налогов, пеней, штрафов, угрозой уголовной ответственности по&nbsp;основаниям
+				+e.OL.who-needs-pills
+					+whoNeedsPill('Сомнительные сделки')
+					+whoNeedsPill('Сделки с взаимозависимыми лицами')
+					+whoNeedsPill('Дробление бизнеса')
 		+e.consequences-bl
 			+e.who-needs-bl-mob-bg.d-block.d-md-none
 				img.lazy(src="#" data-src="img/@2x/convince-info-who-needs-mob-bg-big.jpg" alt="")
@@ -39,9 +39,8 @@ mixin consequencesPill(imgNum='1', pillDescr='Потеря оборотных с
 				+icon('check')
 		+e.consequences-pill-descr=pillDescr
 
-mixin whoNeedsPill(pillNumber='01', pillDescr='Сомнительные сделки')
-	+e.who-needs-item
-		span.who-needs-item-number=pillNumber
+mixin whoNeedsPill(pillDescr='Сомнительные сделки')
+	+e.LI.who-needs-item
 		.item-txt
 			span=pillDescr
 

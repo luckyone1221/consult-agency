@@ -1,8 +1,6 @@
 // start .sConvinceInfo
 .sConvinceInfo {
 	position: relative;
-	//margin-top: -19px;//??
-	//margin-top: -3px;//??
 
 	//bg
 	&__section-bg-img{
@@ -42,6 +40,23 @@
 			position: relative;
 			z-index: 2;
 		}
+
+		//
+		p {
+			//max-width: 1015px;
+			max-width: 760px;
+			margin-left: auto;
+			margin-right: auto;
+
+			font-size: 16px;
+			line-height: 19.5px;
+			margin-bottom: 33px;
+			@include media-breakpoint-up(md){
+				font-size: 20px;
+				line-height: 30px;
+				margin-bottom: 25px;
+			}
+		}
 	}
 	//mob-bg
 	&__who-needs-bl-mob-bg{
@@ -71,7 +86,6 @@
 		margin-left: auto;
 		margin-right: auto;
 
-
 		font-size: 20px;
 		margin-bottom: 12px;
 		@include media-breakpoint-up(md){
@@ -83,21 +97,12 @@
 			margin-bottom: 26px;
 		}
 	}
-	&__who-needs-descr{
-		max-width: 1015px;
-		margin-left: auto;
-		margin-right: auto;
 
-		font-size: 16px;
-		line-height: 19.5px;
-		margin-bottom: 33px;
-		@include media-breakpoint-up(md){
-			font-size: 20px;
-			line-height: 30px;
-			margin-bottom: 25px;
-		}
-	}
+
+
 	&__who-needs-pills{
+		counter-reset: list 0;
+		margin-bottom: 0;
 
 		padding-bottom: 3px;
 		@include media-breakpoint-up(sm){
@@ -112,6 +117,37 @@
 		}
 	}
 	&__who-needs-item{
+		list-style-type: none;
+		&:before {
+			counter-increment: list; /* Увеличиваем значение счетчика */
+			content: "0"counter(list); /* Выводим число */
+
+			//
+			opacity: .35;
+			color: $white;
+			font-weight: 300;
+
+			display: inline-flex;
+			justify-content: flex-end;
+			width: 52.5px;
+			font-size: 50px;
+			line-height: 50px;
+			@include media-breakpoint-up(md){
+				width: 140px;
+				font-size: 100px;
+				line-height: 100px;
+				justify-content: center;
+			}
+			@include media-breakpoint-up(lg){
+				width: auto;
+				font-size: 175px;
+				line-height: 200px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 200px;
+			}
+		}
+
 		position: relative;
 		padding-left: 6px;
 		text-align: left;
@@ -121,15 +157,19 @@
 			margin-bottom: 0px;
 		}
 		@include media-breakpoint-up(xl){
+			margin-right: 150px;
+		}
+		@include media-breakpoint-up(xxl){
 			margin-right: 190px;
 		}
 
 		&:nth-child(2){
-			@include media-breakpoint-up(xl){
+			@include media-breakpoint-up(xxl){
 				left: 24px;
 			}
 		}
-		.who-needs-item-number{
+
+		/*.who-needs-item-number{
 			opacity: .35;
 			color: $white;
 			font-weight: 300;
@@ -150,7 +190,7 @@
 				font-size: 200px;
 				line-height: 200px;
 			}
-		}
+		}*/
 		.item-txt{
 			text-align: left;
 			font-size: 14px;
@@ -339,6 +379,7 @@
 		min-width: 165px;
 		@include media-breakpoint-up(sm){
 			margin-top: 0px;
+			margin-bottom: 40px;
 		}
 	}
 	&__{}

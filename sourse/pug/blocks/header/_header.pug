@@ -2,8 +2,8 @@ mixin header()
 	// start header
 	+b.HEADER.header#header&attributes(attributes)
 		+e.A.logo-link(href="#")
-			img.white-logo(src="img/@2x/logo.png")
-			img.blue-logo(src="img/@2x/logo-blue.png")
+			img.white-logo(src="img/@2x/logo.png" alt='')
+			img.blue-logo(src="img/@2x/logo-blue.png" alt='')
 			span.d-none.d-xxl-block Консалтинговое агентство
 		+desctopMenu()
 		+e.right-nav-mnu
@@ -15,7 +15,7 @@ mixin header()
 			span
 		+e.desctop-search.desctop-search-js.d-none.d-xl-flex
 			+form-wrap()
-				+e.searh-icon-cont
+				+e.BUTTON.searh-btn
 					+icon('search')
 				+input('Начните поиск')
 				+e.close-icon-cont.close-desctop-search-js
@@ -178,107 +178,112 @@ mixin desktopAgencySubMenu()
 mixin mobileAgencySubMenu()
 	+b.agency-mob-submenu-content
 		+e.sub-menu-box.sub-menu-box-mob-js
-			+e.sub-menu-items
-				a(href="#") О нас
-				a(href="#") Мероприятия
-				a(href="#") Партнерам
-				a(href="#") Карьера
-				a(href="#") Обратная связь
+			ul
+				li
+					a(href="#") О нас
+				li
+					a(href="#") Мероприятия
+				li
+					a(href="#") Партнерам
+				li
+					a(href="#") Карьера
+				li
+					a(href="#") Обратная связь
 
 mixin mobileServiceSubMenu()
 	+b.service-mob-submenu-content
 		+e.sub-menu-box.sub-menu-box-mob-js
 			+e.sub-menu-item-headline Налоговый консалтинг
-			+e.sub-menu-items-list
-				+e.sub-menu-item
+			ul
+				li
 					a(href="#") Налоговые споры
-				+e.sub-menu-item
+				li
 					a(href="#") Сопровождение налоговых проверок
-				+e.sub-menu-item
+				li
 					a(href="#") Консультации по налогам
-				+e.sub-menu-item
+				li
 					a(href="#") Налоговое планирование
-				+e.sub-menu-item
+				li
 					a(href="#") Риски непогашеной задолжености
-				+e.sub-menu-item
+				li
 					a(href="#") Досудебное регулирование
-				+e.sub-menu-item
+				li
 					a(href="#") Аналог выездной налоговой проверки
-				+e.sub-menu-item
+				li
 					a(href="#") Пакет должной осмотрительности
-				+e.sub-menu-item
+				li
 					a(href="#") Пакет безопасности сделки
 		+e.sub-menu-box.sub-menu-box-mob-js
 			+e.sub-menu-item-headline Финансовый консалтинг
-			+e.sub-menu-items-list
-				+e.sub-menu-item
+			ul
+				li
 					a(href="#") Управленческий учет
-				+e.sub-menu-item
+				li
 					a(href="#") Система бюджетирования
-				+e.sub-menu-item
+				li
 					a(href="#") Анализ ФХД
-				+e.sub-menu-item
+				li
 					a(href="#") Участие в переговорах с кредиторами
 		+e.sub-menu-box.sub-menu-box-mob-js
 			+e.sub-menu-item-headline Бухгалтерские услуги
-			+e.sub-menu-items-list
-				+e.sub-menu-item
+			ul
+				li
 					a(href="#") Сопровождение передачи дел от Главного Бухгалтера
-				+e.sub-menu-item
+				li
 					a(href="#") Восстановление бухгалтерского учета
-				+e.sub-menu-item
+				li
 					a(href="#") Постановка бухгалтерского и налогового учета
-				+e.sub-menu-item
+				li
 					a(href="#") Разработка учетной политики
 		+e.sub-menu-box.sub-menu-box-mob-js
 			+e.sub-menu-item-headline HR-консалтинг
-			+e.sub-menu-items-list
-				+e.sub-menu-item
+			ul
+				li
 					a(href="#") Оценка персонала финансов
-				+e.sub-menu-item
+				li
 					a(href="#") Оценка персонала бухгалтерии
-				+e.sub-menu-item
+				li
 					a(href="#") Подбор Главного Бухгалтера
-				+e.sub-menu-item
+				li
 					a(href="#") Подбор Финансового Директора
 		+e.sub-menu-box.sub-menu-box-mob-js
 			+e.sub-menu-item-headline Правовые услуги
-			+e.sub-menu-items-list
-				+e.sub-menu-item
+			ul
+				li
 					a(href="#") Структурирование бизнеса
-					+e.sub2-menu-list
-						+e.sub2-menu-item
+					ul
+						li
 							a(href="#") Юридическая структура
-						+e.sub2-menu-item
+						li
 							a(href="#") Структурирование активов
-				+e.sub-menu-item
+				li
 					a(href="#") Банкротство
-					+e.sub2-menu-list
-						+e.sub2-menu-item
+					ul
+						li
 							a(href="#") Оценка перспектив банкротства
-						+e.sub2-menu-item
+						li
 							a(href="#") Юридическое сопровождение банкротства
-						+e.sub2-menu-item
+						li
 							a(href="#") Защита от субсидиарной ответственности
-				+e.sub-menu-item
+				li
 					a(href="#") Финансовый анализ Должника (пост. 855)
 		+e.sub-menu-box.sub-menu-box-mob-js
 			+e.sub-menu-item-headline Консалтинговые услуги
-			+e.sub-menu-items-list
-				+e.sub-menu-item
+			ul
+				li
 					a(href="#") Независимая инвентаризация активов и обязательств
-				+e.sub-menu-item
+				li
 					a(href="#") Закрытие Бизнеса
-					+e.sub2-menu-list
-						+e.sub2-menu-item
+					ul
+						li
 							a(href="#") Закрытие со свидением в "0"
-						+e.sub2-menu-item
+						li
 							a(href="#") Передача
-						+e.sub2-menu-item
+						li
 							a(href="#") Продажа
-						+e.sub2-menu-item
+						li
 							a(href="#") Банкротство
-						+e.sub2-menu-item
+						li
 							a(href="#") Психологическая помощь
-				+e.sub-menu-item
+				li
 					a(href="#") Заключения специалистов в рамках судебного делопроизводства

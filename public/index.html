@@ -21,6 +21,8 @@
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<!--fontawesome-->
+		<link rel="stylesheet" href="libs/@fortawesome/fontawesome-free/css/all.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
@@ -28,7 +30,7 @@
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock" style="background-image: url(img/@2x/header-bg.jpg);">
 				<!-- start header-->
-				<header class="header" id="header"><a class="header__logo-link" href="#"><img class="white-logo" src="img/@2x/logo.png"/><img class="blue-logo" src="img/@2x/logo-blue.png"/><span class="d-none d-xxl-block">Консалтинговое агентство</span></a>
+				<header class="header" id="header"><a class="header__logo-link" href="#"><img class="white-logo" src="img/@2x/logo.png" alt=""/><img class="blue-logo" src="img/@2x/logo-blue.png" alt=""/><span class="d-none d-xxl-block">Консалтинговое агентство</span></a>
 					<ul class="menu header-menu d-none d-xl-flex" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 						<li class="menu-item" itemprop="item"><a href="" itemprop="url">Услуги</a>
 							<div class="menu-hover-popup">
@@ -190,12 +192,12 @@
 								<input class="utm_term" type="hidden" name="utm_term"/>
 								<input class="utm_medium" type="hidden" name="utm_medium"/>
 								<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-								<div class="form-wrap__searh-icon-cont">
+								<button class="form-wrap__searh-btn">
 									<svg class="icon icon-search ">
 										<use xlink:href="img/svg/sprite.svg#search"></use>
 									</svg>
-								</div>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Начните поиск" step="" name="text"/>
+								</button>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Начните поиск" name="text"/>
 								</div>
 								<!-- +e.input-wrap-->
 								<div class="form-wrap__close-icon-cont close-desctop-search-js">
@@ -215,7 +217,7 @@
 								<input class="utm_term" type="hidden" name="utm_term"/>
 								<input class="utm_medium" type="hidden" name="utm_medium"/>
 								<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Начните поиск" step="" name="text"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Начните поиск" name="text"/>
 									<div class="search-icon-cont">
 										<svg class="icon icon-search ">
 											<use xlink:href="img/svg/sprite.svg#search"></use>
@@ -232,118 +234,84 @@
 										<div class="service-mob-submenu-content__sub-menu-box sub-menu-box-mob-js">
 											<div class="service-mob-submenu-content__sub-menu-item-headline">Налоговый консалтинг
 											</div>
-											<div class="service-mob-submenu-content__sub-menu-items-list">
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Налоговые споры</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Сопровождение налоговых проверок</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Консультации по налогам</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Налоговое планирование</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Риски непогашеной задолжености</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Досудебное регулирование</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Аналог выездной налоговой проверки</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Пакет должной осмотрительности</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Пакет безопасности сделки</a>
-												</div>
-											</div>
+											<ul>
+												<li><a href="#">Налоговые споры</a></li>
+												<li><a href="#">Сопровождение налоговых проверок</a></li>
+												<li><a href="#">Консультации по налогам</a></li>
+												<li><a href="#">Налоговое планирование</a></li>
+												<li><a href="#">Риски непогашеной задолжености</a></li>
+												<li><a href="#">Досудебное регулирование</a></li>
+												<li><a href="#">Аналог выездной налоговой проверки</a></li>
+												<li><a href="#">Пакет должной осмотрительности</a></li>
+												<li><a href="#">Пакет безопасности сделки</a></li>
+											</ul>
 										</div>
 										<div class="service-mob-submenu-content__sub-menu-box sub-menu-box-mob-js">
 											<div class="service-mob-submenu-content__sub-menu-item-headline">Финансовый консалтинг
 											</div>
-											<div class="service-mob-submenu-content__sub-menu-items-list">
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Управленческий учет</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Система бюджетирования</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Анализ ФХД</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Участие в переговорах с кредиторами</a>
-												</div>
-											</div>
+											<ul>
+												<li><a href="#">Управленческий учет</a></li>
+												<li><a href="#">Система бюджетирования</a></li>
+												<li><a href="#">Анализ ФХД</a></li>
+												<li><a href="#">Участие в переговорах с кредиторами</a></li>
+											</ul>
 										</div>
 										<div class="service-mob-submenu-content__sub-menu-box sub-menu-box-mob-js">
 											<div class="service-mob-submenu-content__sub-menu-item-headline">Бухгалтерские услуги
 											</div>
-											<div class="service-mob-submenu-content__sub-menu-items-list">
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Сопровождение передачи дел от Главного Бухгалтера</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Восстановление бухгалтерского учета</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Постановка бухгалтерского и налогового учета</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Разработка учетной политики</a>
-												</div>
-											</div>
+											<ul>
+												<li><a href="#">Сопровождение передачи дел от Главного Бухгалтера</a></li>
+												<li><a href="#">Восстановление бухгалтерского учета</a></li>
+												<li><a href="#">Постановка бухгалтерского и налогового учета</a></li>
+												<li><a href="#">Разработка учетной политики</a></li>
+											</ul>
 										</div>
 										<div class="service-mob-submenu-content__sub-menu-box sub-menu-box-mob-js">
 											<div class="service-mob-submenu-content__sub-menu-item-headline">HR-консалтинг
 											</div>
-											<div class="service-mob-submenu-content__sub-menu-items-list">
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Оценка персонала финансов</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Оценка персонала бухгалтерии</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Подбор Главного Бухгалтера</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Подбор Финансового Директора</a>
-												</div>
-											</div>
+											<ul>
+												<li><a href="#">Оценка персонала финансов</a></li>
+												<li><a href="#">Оценка персонала бухгалтерии</a></li>
+												<li><a href="#">Подбор Главного Бухгалтера</a></li>
+												<li><a href="#">Подбор Финансового Директора</a></li>
+											</ul>
 										</div>
 										<div class="service-mob-submenu-content__sub-menu-box sub-menu-box-mob-js">
 											<div class="service-mob-submenu-content__sub-menu-item-headline">Правовые услуги
 											</div>
-											<div class="service-mob-submenu-content__sub-menu-items-list">
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Структурирование бизнеса</a>
-													<div class="service-mob-submenu-content__sub2-menu-list">
-														<div class="service-mob-submenu-content__sub2-menu-item"><a href="#">Юридическая структура</a>
-														</div>
-														<div class="service-mob-submenu-content__sub2-menu-item"><a href="#">Структурирование активов</a>
-														</div>
-													</div>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Банкротство</a>
-													<div class="service-mob-submenu-content__sub2-menu-list">
-														<div class="service-mob-submenu-content__sub2-menu-item"><a href="#">Оценка перспектив банкротства</a>
-														</div>
-														<div class="service-mob-submenu-content__sub2-menu-item"><a href="#">Юридическое сопровождение банкротства</a>
-														</div>
-														<div class="service-mob-submenu-content__sub2-menu-item"><a href="#">Защита от субсидиарной ответственности</a>
-														</div>
-													</div>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Финансовый анализ Должника (пост. 855)</a>
-												</div>
-											</div>
+											<ul>
+												<li><a href="#">Структурирование бизнеса</a>
+													<ul>
+														<li><a href="#">Юридическая структура</a></li>
+														<li><a href="#">Структурирование активов</a></li>
+													</ul>
+												</li>
+												<li><a href="#">Банкротство</a>
+													<ul>
+														<li><a href="#">Оценка перспектив банкротства</a></li>
+														<li><a href="#">Юридическое сопровождение банкротства</a></li>
+														<li><a href="#">Защита от субсидиарной ответственности</a></li>
+													</ul>
+												</li>
+												<li><a href="#">Финансовый анализ Должника (пост. 855)</a></li>
+											</ul>
 										</div>
 										<div class="service-mob-submenu-content__sub-menu-box sub-menu-box-mob-js">
 											<div class="service-mob-submenu-content__sub-menu-item-headline">Консалтинговые услуги
 											</div>
-											<div class="service-mob-submenu-content__sub-menu-items-list">
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Независимая инвентаризация активов и обязательств</a>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Закрытие Бизнеса</a>
-													<div class="service-mob-submenu-content__sub2-menu-list">
-														<div class="service-mob-submenu-content__sub2-menu-item"><a href="#">Закрытие со свидением в "0"</a>
-														</div>
-														<div class="service-mob-submenu-content__sub2-menu-item"><a href="#">Передача</a>
-														</div>
-														<div class="service-mob-submenu-content__sub2-menu-item"><a href="#">Продажа</a>
-														</div>
-														<div class="service-mob-submenu-content__sub2-menu-item"><a href="#">Банкротство</a>
-														</div>
-														<div class="service-mob-submenu-content__sub2-menu-item"><a href="#">Психологическая помощь</a>
-														</div>
-													</div>
-												</div>
-												<div class="service-mob-submenu-content__sub-menu-item"><a href="#">Заключения специалистов в рамках судебного делопроизводства</a>
-												</div>
-											</div>
+											<ul>
+												<li><a href="#">Независимая инвентаризация активов и обязательств</a></li>
+												<li><a href="#">Закрытие Бизнеса</a>
+													<ul>
+														<li><a href="#">Закрытие со свидением в "0"</a></li>
+														<li><a href="#">Передача</a></li>
+														<li><a href="#">Продажа</a></li>
+														<li><a href="#">Банкротство</a></li>
+														<li><a href="#">Психологическая помощь</a></li>
+													</ul>
+												</li>
+												<li><a href="#">Заключения специалистов в рамках судебного делопроизводства</a></li>
+											</ul>
 										</div>
 									</div>
 								</div>
@@ -354,8 +322,13 @@
 								<div class="mob-menu-sub-menu">
 									<div class="agency-mob-submenu-content">
 										<div class="agency-mob-submenu-content__sub-menu-box sub-menu-box-mob-js">
-											<div class="agency-mob-submenu-content__sub-menu-items"><a href="#">О нас</a><a href="#">Мероприятия</a><a href="#">Партнерам</a><a href="#">Карьера</a><a href="#">Обратная связь</a>
-											</div>
+											<ul>
+												<li><a href="#">О нас</a></li>
+												<li><a href="#">Мероприятия</a></li>
+												<li><a href="#">Партнерам</a></li>
+												<li><a href="#">Карьера</a></li>
+												<li><a href="#">Обратная связь</a></li>
+											</ul>
 										</div>
 									</div>
 								</div>
@@ -374,12 +347,10 @@
 									<div class="headerBlock__slide-title">Налоговое консультирование и правовые услуги
 									</div>
 									<div class="headerBlock__slide-descr">Первый шаг к вашей безопасности
-									</div>
-									<div class="headerBlock__learn-more-btn"><span>Узнать больше</span>
-										<svg class="icon icon-right-chevron ">
-											<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
-										</svg>
-									</div>
+									</div><a class="headerBlock__learn-more-btn" href="#"><span>Узнать больше</span>
+									<svg class="icon icon-right-chevron ">
+										<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
+									</svg></a>
 								</div>
 							</div>
 							<div class="swiper-slide">
@@ -387,12 +358,10 @@
 									<div class="headerBlock__slide-title">Налоговое консультирование и правовые услуги 2
 									</div>
 									<div class="headerBlock__slide-descr">Первый шаг к вашей безопасности
-									</div>
-									<div class="headerBlock__learn-more-btn"><span>Узнать больше</span>
-										<svg class="icon icon-right-chevron ">
-											<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
-										</svg>
-									</div>
+									</div><a class="headerBlock__learn-more-btn" href="#"><span>Узнать больше</span>
+									<svg class="icon icon-right-chevron ">
+										<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
+									</svg></a>
 								</div>
 							</div>
 							<div class="swiper-slide">
@@ -400,12 +369,10 @@
 									<div class="headerBlock__slide-title">Налоговое консультирование и правовые услуги 3
 									</div>
 									<div class="headerBlock__slide-descr">Первый шаг к вашей безопасности
-									</div>
-									<div class="headerBlock__learn-more-btn"><span>Узнать больше</span>
-										<svg class="icon icon-right-chevron ">
-											<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
-										</svg>
-									</div>
+									</div><a class="headerBlock__learn-more-btn" href="#"><span>Узнать больше</span>
+									<svg class="icon icon-right-chevron ">
+										<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
+									</svg></a>
 								</div>
 							</div>
 							<div class="swiper-slide">
@@ -413,17 +380,15 @@
 									<div class="headerBlock__slide-title">Налоговое консультирование и правовые услуги 4
 									</div>
 									<div class="headerBlock__slide-descr">Первый шаг к вашей безопасности
-									</div>
-									<div class="headerBlock__learn-more-btn"><span>Узнать больше</span>
-										<svg class="icon icon-right-chevron ">
-											<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
-										</svg>
-									</div>
+									</div><a class="headerBlock__learn-more-btn" href="#"><span>Узнать больше</span>
+									<svg class="icon icon-right-chevron ">
+										<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
+									</svg></a>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div><a class="headerBlock__our-service-btn d-none d-lg-block" href="#"><span>Наши услуги</span>
+				</div><a class="headerBlock__our-service-btn d-none d-lg-block ancor-js" href="#sAgencyPractice"><span>Наши услуги</span>
 				<svg class="icon icon-down-arrow ">
 					<use xlink:href="img/svg/sprite.svg#down-arrow"></use>
 				</svg></a>
@@ -464,37 +429,21 @@
 								<div class="agency-practice-slider-container">
 									<div class="swiper-container agency-practice-sw-cont-js">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-1.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Обязательный аудит
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-1.jpg" alt=""/></span>
+												<h6>Обязательный аудит</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-2.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Инициативный аудит1
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-2.jpg" alt=""/></span>
+												<h6>Инициативный аудит1</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-3.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Бухгалтерский консалтинг1
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-3.jpg" alt=""/></span>
+												<h6>Бухгалтерский консалтинг1</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-4.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Независимая инвентаризация активов и обязательств1
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-4.jpg" alt=""/></span>
+												<h6>Независимая инвентаризация активов и обязательств1</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.</p></a>
 											</div>
 										</div>
 									</div>
@@ -508,37 +457,21 @@
 								<div class="agency-practice-slider-container">
 									<div class="swiper-container agency-practice-sw-cont-js">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-1.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Обязательный аудит
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-1.jpg" alt=""/></span>
+												<h6>Обязательный аудит</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-2.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Инициативный аудит2
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-2.jpg" alt=""/></span>
+												<h6>Инициативный аудит2</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-3.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Бухгалтерский консалтинг2
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-3.jpg" alt=""/></span>
+												<h6>Бухгалтерский консалтинг2</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-4.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Независимая инвентаризация активов и обязательств2
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-4.jpg" alt=""/></span>
+												<h6>Независимая инвентаризация активов и обязательств2</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.</p></a>
 											</div>
 										</div>
 									</div>
@@ -552,37 +485,21 @@
 								<div class="agency-practice-slider-container">
 									<div class="swiper-container agency-practice-sw-cont-js">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-1.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Обязательный аудит
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-1.jpg" alt=""/></span>
+												<h6>Обязательный аудит</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-2.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Инициативный аудит3
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-2.jpg" alt=""/></span>
+												<h6>Инициативный аудит3</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-3.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Бухгалтерский консалтинг3
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-3.jpg" alt=""/></span>
+												<h6>Бухгалтерский консалтинг3</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-4.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Независимая инвентаризация активов и обязательств3
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-4.jpg" alt=""/></span>
+												<h6>Независимая инвентаризация активов и обязательств3</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.</p></a>
 											</div>
 										</div>
 									</div>
@@ -596,37 +513,21 @@
 								<div class="agency-practice-slider-container">
 									<div class="swiper-container agency-practice-sw-cont-js">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-1.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Обязательный аудит
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-1.jpg" alt=""/></span>
+												<h6>Обязательный аудит</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-2.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Инициативный аудит4
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-2.jpg" alt=""/></span>
+												<h6>Инициативный аудит4</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-3.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Бухгалтерский консалтинг4
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-3.jpg" alt=""/></span>
+												<h6>Бухгалтерский консалтинг4</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-4.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Независимая инвентаризация активов и обязательств4
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-4.jpg" alt=""/></span>
+												<h6>Независимая инвентаризация активов и обязательств4</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.</p></a>
 											</div>
 										</div>
 									</div>
@@ -640,37 +541,21 @@
 								<div class="agency-practice-slider-container">
 									<div class="swiper-container agency-practice-sw-cont-js">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-1.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Обязательный аудит
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-1.jpg" alt=""/></span>
+												<h6>Обязательный аудит</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-2.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Инициативный аудит5
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-2.jpg" alt=""/></span>
+												<h6>Инициативный аудит5</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-3.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Бухгалтерский консалтинг5
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-3.jpg" alt=""/></span>
+												<h6>Бухгалтерский консалтинг5</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-4.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Независимая инвентаризация активов и обязательств5
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-4.jpg" alt=""/></span>
+												<h6>Независимая инвентаризация активов и обязательств5</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.</p></a>
 											</div>
 										</div>
 									</div>
@@ -684,37 +569,21 @@
 								<div class="agency-practice-slider-container">
 									<div class="swiper-container agency-practice-sw-cont-js">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-1.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Обязательный аудит
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-1.jpg" alt=""/></span>
+												<h6>Обязательный аудит</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении организации.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-2.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Инициативный аудит6
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-2.jpg" alt=""/></span>
+												<h6>Инициативный аудит6</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию о финансовом положении.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-3.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Бухгалтерский консалтинг6
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-3.jpg" alt=""/></span>
+												<h6>Бухгалтерский консалтинг6</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.</p></a>
 											</div>
-											<div class="swiper-slide">
-												<div class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-4.jpg" alt=""/>
-												</div>
-												<div class="agency-practice-slider-container__slide-title">Независимая инвентаризация активов и обязательств6
-												</div>
-												<p class="agency-practice-slider-container__slide-description">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
-												</p>
+											<div class="swiper-slide"><a class="agency-practice-slider-container__Apractice-slide-cont" href="#"><span class="agency-practice-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/Agency-practice-4.jpg" alt=""/></span>
+												<h6>Независимая инвентаризация активов и обязательств6</h6>
+												<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.</p></a>
 											</div>
 										</div>
 									</div>
@@ -738,28 +607,28 @@
 					</div>
 					<div class="sProfit__profit-row row">
 						<div class="sProfit__profit-item-cont col-12 col-sm-6 col-xl-3">
-							<div class="sProfit__bg-img"><img class="lazy" src="#" data-src="img/@2x/profit-img-1.jpg" alt="#"/>
-							</div><a class="sProfit__profit-item" href="#"><span class="sProfit__inner-img"><img class="blue-img" src="img/profit-1.svg"/><img class="white-img" src="img/profit-white-1.svg"/></span><span class="sProfit__profit-headline">Более 10 лет опыта</span>
-							<p class="sProfit__profit-description">Главным конкурентным преимуществом является опыт работы в финансовом консалтинге, который составляет более 10 лет, накопленный опыт дает нам огромные возможности.
-							</p><span class="sProfit__profit-item-number">01</span></a>
+							<div class="sProfit__bg-img"><img class="lazy" src="#" data-src="img/@2x/profit-img-1.jpg" alt=""/>
+							</div><a class="sProfit__profit-item"><span class="sProfit__inner-img"><img class="blue-img" src="img/profit-1.svg" alt=""/><img class="white-img" src="img/profit-white-1.svg" alt=""/></span>
+							<h6>Более 10 лет опыта</h6>
+							<p>Главным конкурентным преимуществом является опыт работы в финансовом консалтинге, который составляет более 10 лет, накопленный опыт дает нам огромные возможности.</p></a>
 						</div>
 						<div class="sProfit__profit-item-cont col-12 col-sm-6 col-xl-3">
-							<div class="sProfit__bg-img"><img class="lazy" src="#" data-src="img/@2x/profit-img-1.jpg" alt="#"/>
-							</div><a class="sProfit__profit-item" href="#"><span class="sProfit__inner-img"><img class="blue-img" src="img/profit-2.svg"/><img class="white-img" src="img/profit-white-2.svg"/></span><span class="sProfit__profit-headline">Высококлассные специалисты</span>
-							<p class="sProfit__profit-description">Наш персонал состоит из первоклассных специалистов с перфекционистскими чертами характера, которые способны погружаться в самую глубину проблем, докапываться до сути и видеть насквозь все детали и нюансы.
-							</p><span class="sProfit__profit-item-number">02</span></a>
+							<div class="sProfit__bg-img"><img class="lazy" src="#" data-src="img/@2x/profit-img-1.jpg" alt=""/>
+							</div><a class="sProfit__profit-item"><span class="sProfit__inner-img"><img class="blue-img" src="img/profit-2.svg" alt=""/><img class="white-img" src="img/profit-white-2.svg" alt=""/></span>
+							<h6>Высококлассные специалисты</h6>
+							<p>Наш персонал состоит из первоклассных специалистов с перфекционистскими чертами характера, которые способны погружаться в самую глубину проблем, докапываться до сути и видеть насквозь все детали и нюансы.</p></a>
 						</div>
 						<div class="sProfit__profit-item-cont col-12 col-sm-6 col-xl-3">
-							<div class="sProfit__bg-img"><img class="lazy" src="#" data-src="img/@2x/profit-img-1.jpg" alt="#"/>
-							</div><a class="sProfit__profit-item" href="#"><span class="sProfit__inner-img"><img class="blue-img" src="img/profit-3.svg"/><img class="white-img" src="img/profit-white-3.svg"/></span><span class="sProfit__profit-headline">Обширные связи</span>
-							<p class="sProfit__profit-description">Располагаем глубокими сетевыми связями с «бывшими» сотрудниками ФНС и налоговыми юристами, а так же с адвокатами умеющими хорошо защищаться от СК РФ.
-							</p><span class="sProfit__profit-item-number">03</span></a>
+							<div class="sProfit__bg-img"><img class="lazy" src="#" data-src="img/@2x/profit-img-1.jpg" alt=""/>
+							</div><a class="sProfit__profit-item"><span class="sProfit__inner-img"><img class="blue-img" src="img/profit-3.svg" alt=""/><img class="white-img" src="img/profit-white-3.svg" alt=""/></span>
+							<h6>Обширные связи</h6>
+							<p>Располагаем глубокими сетевыми связями с «бывшими» сотрудниками ФНС и налоговыми юристами, а так же с адвокатами умеющими хорошо защищаться от СК РФ.</p></a>
 						</div>
 						<div class="sProfit__profit-item-cont col-12 col-sm-6 col-xl-3">
-							<div class="sProfit__bg-img"><img class="lazy" src="#" data-src="img/@2x/profit-img-1.jpg" alt="#"/>
-							</div><a class="sProfit__profit-item" href="#"><span class="sProfit__inner-img"><img class="blue-img" src="img/profit-4.svg"/><img class="white-img" src="img/profit-white-4.svg"/></span><span class="sProfit__profit-headline">Более 500 млн. рублей</span>
-							<p class="sProfit__profit-description">Мы всегда стоим на стороне интересов малого и среднего бизнеса. На сегодняшний день на нашем счету отбитых у налоговиков около 500 млн. рублей.
-							</p><span class="sProfit__profit-item-number">04</span></a>
+							<div class="sProfit__bg-img"><img class="lazy" src="#" data-src="img/@2x/profit-img-1.jpg" alt=""/>
+							</div><a class="sProfit__profit-item"><span class="sProfit__inner-img"><img class="blue-img" src="img/profit-4.svg" alt=""/><img class="white-img" src="img/profit-white-4.svg" alt=""/></span>
+							<h6>Более 500 млн. рублей</h6>
+							<p>Мы всегда стоим на стороне интересов малого и среднего бизнеса. На сегодняшний день на нашем счету отбитых у налоговиков около 500 млн. рублей.</p></a>
 						</div>
 					</div>
 					<div class="sProfit__about-us-btn"><span>О нас</span>
@@ -780,22 +649,21 @@
 					<div class="container">
 						<div class="sConvinceInfo__who-needs-headline">Кому нужны услуги агентства в первую очередь
 						</div>
-						<div class="sConvinceInfo__who-needs-descr">Профессиональная защита бизнеса столкнувшегося с&nbsp;доначислением налогов, пеней, штрафов, угрозой уголовной ответственности по&nbsp;основаниям
-						</div>
-						<div class="sConvinceInfo__who-needs-pills">
-							<div class="sConvinceInfo__who-needs-item"><span class="who-needs-item-number">01</span>
+						<p>Профессиональная защита бизнеса столкнувшегося с&nbsp;доначислением налогов, пеней, штрафов, угрозой уголовной ответственности по&nbsp;основаниям</p>
+						<ol class="sConvinceInfo__who-needs-pills">
+							<li class="sConvinceInfo__who-needs-item">
 								<div class="item-txt"><span>Сомнительные сделки</span></div>
-							</div>
+							</li>
 							<!-- end sConvinceInfo-->
-							<div class="sConvinceInfo__who-needs-item"><span class="who-needs-item-number">02</span>
+							<li class="sConvinceInfo__who-needs-item">
 								<div class="item-txt"><span>Сделки с взаимозависимыми лицами</span></div>
-							</div>
+							</li>
 							<!-- end sConvinceInfo-->
-							<div class="sConvinceInfo__who-needs-item"><span class="who-needs-item-number">03</span>
+							<li class="sConvinceInfo__who-needs-item">
 								<div class="item-txt"><span>Дробление бизнеса</span></div>
-							</div>
+							</li>
 							<!-- end sConvinceInfo-->
-						</div>
+						</ol>
 					</div>
 				</div>
 				<div class="sConvinceInfo__consequences-bl">
@@ -882,86 +750,48 @@
 						<div class="swiper-container special-swiper-js">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<div class="sSpecials__slide-header">Наши принципы и подходы
-									</div>
+									<h5>Наши принципы и подходы</h5>
 									<ul class="sSpecials__special-pills-list">
 										<li class="sSpecials__special-pills-item">
-											<svg class="icon icon-special-check ">
-												<use xlink:href="img/svg/sprite.svg#special-check"></use>
-											</svg>
-											<div class="pill-txt">В агентстве отсутствует поточный принцип, только индивидуальный подход к проблеме заказчика, только высококачественное обслуживание клиента на всем протяжении дела от первых лиц</div>
+											<p>В агентстве отсутствует поточный принцип, только индивидуальный подход к проблеме заказчика, только высококачественное обслуживание клиента на всем протяжении дела от первых лиц</p>
 										</li>
 										<li class="sSpecials__special-pills-item">
-											<svg class="icon icon-special-check ">
-												<use xlink:href="img/svg/sprite.svg#special-check"></use>
-											</svg>
-											<div class="pill-txt">Понимаем предпринимателей на 100%, сами отдали 20 лет жизни операционному управлению многопрофильного бизнеса. В настоящем помогаем бизнесу пережить, во многом  то, что пришлось пережить самим (в танке сами горели)</div>
+											<p>Понимаем предпринимателей на 100%, сами отдали 20 лет жизни операционному управлению многопрофильного бизнеса. В настоящем помогаем бизнесу пережить, во многом  то, что пришлось пережить самим (в танке сами горели)</p>
 										</li>
 										<li class="sSpecials__special-pills-item">
-											<svg class="icon icon-special-check ">
-												<use xlink:href="img/svg/sprite.svg#special-check"></use>
-											</svg>
-											<div class="pill-txt">Вместе с вами в вашей беде 24 часа</div>
+											<p>Вместе с вами в вашей беде 24 часа</p>
 										</li>
 										<li class="sSpecials__special-pills-item">
-											<svg class="icon icon-special-check ">
-												<use xlink:href="img/svg/sprite.svg#special-check"></use>
-											</svg>
-											<div class="pill-txt">Не разбрасываемся гарантиями, считаем, что в нашей стране это не честно</div>
+											<p>Не разбрасываемся гарантиями, считаем, что в нашей стране это не честно</p>
 										</li>
 										<li class="sSpecials__special-pills-item">
-											<svg class="icon icon-special-check ">
-												<use xlink:href="img/svg/sprite.svg#special-check"></use>
-											</svg>
-											<div class="pill-txt">Не беремся за работу, в которой не сможем обеспечить  должную защиту бизнесу</div>
+											<p>Не беремся за работу, в которой не сможем обеспечить  должную защиту бизнесу</p>
 										</li>
 										<li class="sSpecials__special-pills-item">
-											<svg class="icon icon-special-check ">
-												<use xlink:href="img/svg/sprite.svg#special-check"></use>
-											</svg>
-											<div class="pill-txt">Максимальное внимание к деталям, не теряя объемного стратегического взгляда на ситуацию в сочетании с одержимой креативностью мышления, это по-настоящему выгодно отличает нас от остальных</div>
+											<p>Максимальное внимание к деталям, не теряя объемного стратегического взгляда на ситуацию в сочетании с одержимой креативностью мышления, это по-настоящему выгодно отличает нас от остальных</p>
 										</li>
 									</ul>
 								</div>
 								<div class="swiper-slide gray-fade">
-									<div class="sSpecials__slide-header">Изнанка рынка
-									</div>
+									<h5>Изнанка рынка</h5>
 									<ul class="sSpecials__special-pills-list">
 										<li class="sSpecials__special-pills-item">
-											<svg class="icon icon-special-check ">
-												<use xlink:href="img/svg/sprite.svg#special-check"></use>
-											</svg>
-											<div class="pill-txt">В больших компаниях действует поточная технология, закрепленный за заказчиком специалист и опытный куратор,  который одномоментно сопровождает несколько разных клиентов, время его распределено по принципу Парето</div>
+											<p>В больших компаниях действует поточная технология, закрепленный за заказчиком специалист и опытный куратор,  который одномоментно сопровождает несколько разных клиентов, время его распределено по принципу Парето</p>
 										</li>
 										<li class="sSpecials__special-pills-item">
-											<svg class="icon icon-special-check ">
-												<use xlink:href="img/svg/sprite.svg#special-check"></use>
-											</svg>
-											<div class="pill-txt">В большинстве своем специалисты, работающие в консалтинге, никогда не имели собственного серьезного бизнеса, многие из них очень далеки от истинного понимания психологии предпринимателя</div>
+											<p>В большинстве своем специалисты, работающие в консалтинге, никогда не имели собственного серьезного бизнеса, многие из них очень далеки от истинного понимания психологии предпринимателя</p>
 										</li>
 										<li class="sSpecials__special-pills-item">
-											<svg class="icon icon-special-check ">
-												<use xlink:href="img/svg/sprite.svg#special-check"></use>
-											</svg>
-											<div class="pill-txt">В основной своей массе поточная система обслуживает своих клиентов в рамках своего режима рабочего времени</div>
+											<p>В основной своей массе поточная система обслуживает своих клиентов в рамках своего режима рабочего времени</p>
 										</li>
 										<li class="sSpecials__special-pills-item">
-											<svg class="icon icon-special-check ">
-												<use xlink:href="img/svg/sprite.svg#special-check"></use>
-											</svg>
-											<div class="pill-txt">Нуждающимся в защите всегда нужны гарантии, их много где дают, ради заключения договора, потом всегда можно сослаться на репрессивность государства</div>
+											<p>Нуждающимся в защите всегда нужны гарантии, их много где дают, ради заключения договора, потом всегда можно сослаться на репрессивность государства</p>
 										</li>
 										<li class="sSpecials__special-pills-item">
-											<svg class="icon icon-special-check ">
-												<use xlink:href="img/svg/sprite.svg#special-check"></use>
-											</svg>
-											<div class="pill-txt">Время деньги (клиент платит – процесс ведется) используемый принцип многих в основном юридических организаций</div>
+											<p>Время деньги (клиент платит – процесс ведется) используемый принцип многих в основном юридических организаций</p>
 										</li>
 										<li class="sSpecials__special-pills-item">
-											<svg class="icon icon-special-check ">
-												<use xlink:href="img/svg/sprite.svg#special-check"></use>
-											</svg>
-											<div class="pill-txt">Заказчики,  пришедшие к нам из других мест, жалуются на поверхностное или шаблонное применение подхода в их истории, это подчеркивает неумение видеть ситуацию по-другому, то, что называется выйти за рамки</div>
+											<p>Заказчики,  пришедшие к нам из других мест, жалуются на поверхностное или шаблонное применение подхода в их истории, это подчеркивает неумение видеть ситуацию по-другому, то, что называется выйти за рамки</p>
 										</li>
 									</ul>
 								</div>
@@ -993,65 +823,73 @@
 									<div class="swiper-wrapper">
 										<div class="swiper-slide">
 											<div class="sResult__result-slide">
-												<div class="sResult__ResSl-company-name-txt">Cтрой Формат Технострой
-												</div>
-												<div class="sResult__ResSl-company-name-descr">Строительная компания
-												</div>
-												<div class="sResult__ResSl-content">
-													<div class="sResult__ResSl-content-item"><span class="sResult__ResSl-item-headline">Проблема:</span><span class="sResult__ResSl-item-descr">Клиент работал с&nbsp;&laquo;компаниями-однодневками&raquo;, для уменьшения НДС. Не&nbsp;представил в&nbsp;налоговый орган доказательства добросовестного налогоплательщика. ИФНС вычисляет &laquo;компании-однодневки&raquo; и&nbsp;за&nbsp;весь период проверки с&nbsp;данными компаниями доначисляет НДС и&nbsp;налог на&nbsp;прибыль.</span>
-													</div>
-													<div class="sResult__ResSl-content-item"><span class="sResult__ResSl-item-headline">Что сделали:</span><span class="sResult__ResSl-item-descr">Представляли интересы на&nbsp;этапе досудебного урегулирования спора.</span>
-													</div>
-													<div class="sResult__ResSl-content-item"><span class="sResult__ResSl-item-headline">Результат:</span><span class="sResult__ResSl-item-descr">Клиент смог отбить все доводы ифнс о&nbsp;&laquo;компаниях- однодневках&raquo; и&nbsp;вернуть денежные средства доначисленные в&nbsp;решении, включая представительские расходы.</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="sResult__result-slide">
-												<div class="sResult__ResSl-company-name-txt">Cтрой Формат Технострой
-												</div>
-												<div class="sResult__ResSl-company-name-descr">Строительная компания2
-												</div>
-												<div class="sResult__ResSl-content">
-													<div class="sResult__ResSl-content-item"><span class="sResult__ResSl-item-headline">Проблема:</span><span class="sResult__ResSl-item-descr">Клиент работал с&nbsp;&laquo;компаниями-однодневками&raquo;, для уменьшения НДС. Не&nbsp;представил в&nbsp;налоговый орган доказательства добросовестного налогоплательщика. ИФНС вычисляет &laquo;компании-однодневки&raquo; и&nbsp;за&nbsp;весь период проверки с&nbsp;данными компаниями доначисляет НДС и&nbsp;налог на&nbsp;прибыль.</span>
-													</div>
-													<div class="sResult__ResSl-content-item"><span class="sResult__ResSl-item-headline">Что сделали:</span><span class="sResult__ResSl-item-descr">Представляли интересы на&nbsp;этапе досудебного урегулирования спора.</span>
-													</div>
-													<div class="sResult__ResSl-content-item"><span class="sResult__ResSl-item-headline">Результат:</span><span class="sResult__ResSl-item-descr">Клиент смог отбить все доводы ифнс о&nbsp;&laquo;компаниях- однодневках&raquo; и&nbsp;вернуть денежные средства доначисленные в&nbsp;решении, включая представительские расходы.</span>
-													</div>
+												<h4>Cтрой Формат Технострой</h4>
+												<p>Строительная компания</p>
+												<div class="sResult__slide-content">
+													<p><strong>Проблема:</strong></p>
+													<p>Клиент работал с&nbsp;&laquo;компаниями-однодневками&raquo;, для уменьшения НДС. Не&nbsp;представил в&nbsp;налоговый орган доказательства добросовестного налогоплательщика. ИФНС вычисляет &laquo;компании-однодневки&raquo; и&nbsp;за&nbsp;весь период проверки с&nbsp;данными компаниями доначисляет НДС и&nbsp;налог на&nbsp;прибыль.</p>
+													<p><strong>Что сделали:</strong></p>
+													<p>Представляли интересы на&nbsp;этапе досудебного урегулирования спора.</p>
+													<p><strong>Результат:</strong></p>
+													<p>Клиент смог отбить все доводы ифнс о&nbsp;&laquo;компаниях- однодневках&raquo; и&nbsp;вернуть денежные средства доначисленные в&nbsp;решении, включая представительские расходы.</p>
+													<!--+e.ResSl-content-item
+													+e.SPAN.ResSl-item-headline Результат:
+													+e.SPAN.ResSl-item-descr Клиент смог отбить все доводы ифнс о&nbsp;&laquo;компаниях- однодневках&raquo; и&nbsp;вернуть денежные средства доначисленные в&nbsp;решении, включая представительские расходы.
+													-->
 												</div>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="sResult__result-slide">
-												<div class="sResult__ResSl-company-name-txt">Cтрой Формат Технострой
-												</div>
-												<div class="sResult__ResSl-company-name-descr">Строительная компания3
-												</div>
-												<div class="sResult__ResSl-content">
-													<div class="sResult__ResSl-content-item"><span class="sResult__ResSl-item-headline">Проблема:</span><span class="sResult__ResSl-item-descr">Клиент работал с&nbsp;&laquo;компаниями-однодневками&raquo;, для уменьшения НДС. Не&nbsp;представил в&nbsp;налоговый орган доказательства добросовестного налогоплательщика. ИФНС вычисляет &laquo;компании-однодневки&raquo; и&nbsp;за&nbsp;весь период проверки с&nbsp;данными компаниями доначисляет НДС и&nbsp;налог на&nbsp;прибыль.</span>
-													</div>
-													<div class="sResult__ResSl-content-item"><span class="sResult__ResSl-item-headline">Что сделали:</span><span class="sResult__ResSl-item-descr">Представляли интересы на&nbsp;этапе досудебного урегулирования спора.</span>
-													</div>
-													<div class="sResult__ResSl-content-item"><span class="sResult__ResSl-item-headline">Результат:</span><span class="sResult__ResSl-item-descr">Клиент смог отбить все доводы ифнс о&nbsp;&laquo;компаниях- однодневках&raquo; и&nbsp;вернуть денежные средства доначисленные в&nbsp;решении, включая представительские расходы.</span>
-													</div>
+												<h4>Cтрой Формат Технострой</h4>
+												<p>Строительная компания2</p>
+												<div class="sResult__slide-content">
+													<p><strong>Проблема:</strong></p>
+													<p>Клиент работал с&nbsp;&laquo;компаниями-однодневками&raquo;, для уменьшения НДС. Не&nbsp;представил в&nbsp;налоговый орган доказательства добросовестного налогоплательщика. ИФНС вычисляет &laquo;компании-однодневки&raquo; и&nbsp;за&nbsp;весь период проверки с&nbsp;данными компаниями доначисляет НДС и&nbsp;налог на&nbsp;прибыль.</p>
+													<p><strong>Что сделали:</strong></p>
+													<p>Представляли интересы на&nbsp;этапе досудебного урегулирования спора.</p>
+													<p><strong>Результат:</strong></p>
+													<p>Клиент смог отбить все доводы ифнс о&nbsp;&laquo;компаниях- однодневках&raquo; и&nbsp;вернуть денежные средства доначисленные в&nbsp;решении, включая представительские расходы.</p>
+													<!--+e.ResSl-content-item
+													+e.SPAN.ResSl-item-headline Результат:
+													+e.SPAN.ResSl-item-descr Клиент смог отбить все доводы ифнс о&nbsp;&laquo;компаниях- однодневках&raquo; и&nbsp;вернуть денежные средства доначисленные в&nbsp;решении, включая представительские расходы.
+													-->
 												</div>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="sResult__result-slide">
-												<div class="sResult__ResSl-company-name-txt">Cтрой Формат Технострой
+												<h4>Cтрой Формат Технострой</h4>
+												<p>Строительная компания3</p>
+												<div class="sResult__slide-content">
+													<p><strong>Проблема:</strong></p>
+													<p>Клиент работал с&nbsp;&laquo;компаниями-однодневками&raquo;, для уменьшения НДС. Не&nbsp;представил в&nbsp;налоговый орган доказательства добросовестного налогоплательщика. ИФНС вычисляет &laquo;компании-однодневки&raquo; и&nbsp;за&nbsp;весь период проверки с&nbsp;данными компаниями доначисляет НДС и&nbsp;налог на&nbsp;прибыль.</p>
+													<p><strong>Что сделали:</strong></p>
+													<p>Представляли интересы на&nbsp;этапе досудебного урегулирования спора.</p>
+													<p><strong>Результат:</strong></p>
+													<p>Клиент смог отбить все доводы ифнс о&nbsp;&laquo;компаниях- однодневках&raquo; и&nbsp;вернуть денежные средства доначисленные в&nbsp;решении, включая представительские расходы.</p>
+													<!--+e.ResSl-content-item
+													+e.SPAN.ResSl-item-headline Результат:
+													+e.SPAN.ResSl-item-descr Клиент смог отбить все доводы ифнс о&nbsp;&laquo;компаниях- однодневках&raquo; и&nbsp;вернуть денежные средства доначисленные в&nbsp;решении, включая представительские расходы.
+													-->
 												</div>
-												<div class="sResult__ResSl-company-name-descr">Строительная компания4
-												</div>
-												<div class="sResult__ResSl-content">
-													<div class="sResult__ResSl-content-item"><span class="sResult__ResSl-item-headline">Проблема:</span><span class="sResult__ResSl-item-descr">Клиент работал с&nbsp;&laquo;компаниями-однодневками&raquo;, для уменьшения НДС. Не&nbsp;представил в&nbsp;налоговый орган доказательства добросовестного налогоплательщика. ИФНС вычисляет &laquo;компании-однодневки&raquo; и&nbsp;за&nbsp;весь период проверки с&nbsp;данными компаниями доначисляет НДС и&nbsp;налог на&nbsp;прибыль.</span>
-													</div>
-													<div class="sResult__ResSl-content-item"><span class="sResult__ResSl-item-headline">Что сделали:</span><span class="sResult__ResSl-item-descr">Представляли интересы на&nbsp;этапе досудебного урегулирования спора.</span>
-													</div>
-													<div class="sResult__ResSl-content-item"><span class="sResult__ResSl-item-headline">Результат:</span><span class="sResult__ResSl-item-descr">Клиент смог отбить все доводы ифнс о&nbsp;&laquo;компаниях- однодневках&raquo; и&nbsp;вернуть денежные средства доначисленные в&nbsp;решении, включая представительские расходы.</span>
-													</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sResult__result-slide">
+												<h4>Cтрой Формат Технострой</h4>
+												<p>Строительная компания4</p>
+												<div class="sResult__slide-content">
+													<p><strong>Проблема:</strong></p>
+													<p>Клиент работал с&nbsp;&laquo;компаниями-однодневками&raquo;, для уменьшения НДС. Не&nbsp;представил в&nbsp;налоговый орган доказательства добросовестного налогоплательщика. ИФНС вычисляет &laquo;компании-однодневки&raquo; и&nbsp;за&nbsp;весь период проверки с&nbsp;данными компаниями доначисляет НДС и&nbsp;налог на&nbsp;прибыль.</p>
+													<p><strong>Что сделали:</strong></p>
+													<p>Представляли интересы на&nbsp;этапе досудебного урегулирования спора.</p>
+													<p><strong>Результат:</strong></p>
+													<p>Клиент смог отбить все доводы ифнс о&nbsp;&laquo;компаниях- однодневках&raquo; и&nbsp;вернуть денежные средства доначисленные в&nbsp;решении, включая представительские расходы.</p>
+													<!--+e.ResSl-content-item
+													+e.SPAN.ResSl-item-headline Результат:
+													+e.SPAN.ResSl-item-descr Клиент смог отбить все доводы ифнс о&nbsp;&laquo;компаниях- однодневках&raquo; и&nbsp;вернуть денежные средства доначисленные в&nbsp;решении, включая представительские расходы.
+													-->
 												</div>
 											</div>
 										</div>
@@ -1071,19 +909,13 @@
 						</div>
 						<div class="sResult__ten-plus-col col-12 col-lg-6">
 							<div class="sResult__ten-plus-container">
-								<div class="sResult__ten-plus-headline">10+&nbsp;от&nbsp;автора, которые вы&nbsp;получаете
-								</div>
-								<ul class="sResult__ten-plus-pills">
-									<li class="sResult__ten-plus-item">Несоизмеримое соотношение сэкономленных реальных денежных средств к оплаченной услуге.
-									</li>
-									<li class="sResult__ten-plus-item">Снижение сопутствующих бизнесу рисков и обретение чувства спокойствия и защищенности.
-									</li>
-									<li class="sResult__ten-plus-item">Соблюдение полной независимости и конфиденциальности в таких интимных вопросах как финансы, учет, налоги, споры и претензии сторон.
-									</li>
-									<li class="sResult__ten-plus-item">Сторонний взгляд, сформированное объективное представление о ситуации, причинах ее возникновения, возможных исходах и путях разрешения.
-									</li>
-									<li class="sResult__ten-plus-item">Тренировка штатного персонала.
-									</li>
+								<h4>10+&nbsp;от&nbsp;автора, которые вы&nbsp;получаете</h4>
+								<ul>
+									<li>Несоизмеримое соотношение сэкономленных реальных денежных средств к оплаченной услуге.</li>
+									<li>Снижение сопутствующих бизнесу рисков и обретение чувства спокойствия и защищенности.</li>
+									<li>Соблюдение полной независимости и конфиденциальности в таких интимных вопросах как финансы, учет, налоги, споры и претензии сторон.</li>
+									<li>Сторонний взгляд, сформированное объективное представление о ситуации, причинах ее возникновения, возможных исходах и путях разрешения.</li>
+									<li>Тренировка штатного персонала.</li>
 								</ul><a class="sResult__lear-more-btn" href="#">Подробнее</a>
 							</div>
 						</div>
@@ -1155,8 +987,7 @@
 										<div class="sWorkingProcess__slide-content">
 											<div class="sWorkingProcess__slide-headline d-none d-lg-block">Получаем заявку1
 											</div>
-											<div class="sWorkingProcess__slide-descr">Обязательный аудит требуется для многих предприятий&nbsp;&mdash; полный список условий описан в&nbsp;законодательства. К&nbsp;Ним, например относятся объем выручки более 400&nbsp;млн. руб или стоимость активов за&nbsp;год более 60&nbsp;млн. Есть и&nbsp;другие случаи, когда аудит обязателен. Если ваша компания подпадает под один из&nbsp;этих критериев, позвоните нам или оставьте заявку на&nbsp;оказание услуги в&nbsp;форме обратной связи. Мы&nbsp;сможем компетентно и&nbsp;обоснованно заявить о&nbsp;правильности ведения учета и&nbsp;достоверности финансовых результатов работы.
-											</div><a class="sWorkingProcess__our-services-btn" href="#"><span>Наши услуги</span>
+											<p>Обязательный аудит требуется для многих предприятий&nbsp;&mdash; полный список условий описан в&nbsp;законодательства. К&nbsp;Ним, например относятся объем выручки более 400&nbsp;млн. руб или стоимость активов за&nbsp;год более 60&nbsp;млн. Есть и&nbsp;другие случаи, когда аудит обязателен. Если ваша компания подпадает под один из&nbsp;этих критериев, позвоните нам или оставьте заявку на&nbsp;оказание услуги в&nbsp;форме обратной связи. Мы&nbsp;сможем компетентно и&nbsp;обоснованно заявить о&nbsp;правильности ведения учета и&nbsp;достоверности финансовых результатов работы.</p><a class="sWorkingProcess__our-services-btn" href="#"><span>Наши услуги</span>
 											<svg class="icon icon-right-chevron ">
 												<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
 											</svg></a><a class="sWorkingProcess__send-aplication-btn" href="#"><span>Отправить заявку</span>
@@ -1177,8 +1008,7 @@
 										<div class="sWorkingProcess__slide-content">
 											<div class="sWorkingProcess__slide-headline d-none d-lg-block">Получаем заявку2
 											</div>
-											<div class="sWorkingProcess__slide-descr">Обязательный аудит требуется для многих предприятий&nbsp;&mdash; полный список условий описан в&nbsp;законодательства. К&nbsp;Ним, например относятся объем выручки более 400&nbsp;млн. руб или стоимость активов за&nbsp;год более 60&nbsp;млн. Есть и&nbsp;другие случаи, когда аудит обязателен. Если ваша компания подпадает под один из&nbsp;этих критериев, позвоните нам или оставьте заявку на&nbsp;оказание услуги в&nbsp;форме обратной связи. Мы&nbsp;сможем компетентно и&nbsp;обоснованно заявить о&nbsp;правильности ведения учета и&nbsp;достоверности финансовых результатов работы.
-											</div><a class="sWorkingProcess__our-services-btn" href="#"><span>Наши услуги</span>
+											<p>Обязательный аудит требуется для многих предприятий&nbsp;&mdash; полный список условий описан в&nbsp;законодательства. К&nbsp;Ним, например относятся объем выручки более 400&nbsp;млн. руб или стоимость активов за&nbsp;год более 60&nbsp;млн. Есть и&nbsp;другие случаи, когда аудит обязателен. Если ваша компания подпадает под один из&nbsp;этих критериев, позвоните нам или оставьте заявку на&nbsp;оказание услуги в&nbsp;форме обратной связи. Мы&nbsp;сможем компетентно и&nbsp;обоснованно заявить о&nbsp;правильности ведения учета и&nbsp;достоверности финансовых результатов работы.</p><a class="sWorkingProcess__our-services-btn" href="#"><span>Наши услуги</span>
 											<svg class="icon icon-right-chevron ">
 												<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
 											</svg></a><a class="sWorkingProcess__send-aplication-btn" href="#"><span>Отправить заявку</span>
@@ -1199,8 +1029,7 @@
 										<div class="sWorkingProcess__slide-content">
 											<div class="sWorkingProcess__slide-headline d-none d-lg-block">Получаем заявку3
 											</div>
-											<div class="sWorkingProcess__slide-descr">Обязательный аудит требуется для многих предприятий&nbsp;&mdash; полный список условий описан в&nbsp;законодательства. К&nbsp;Ним, например относятся объем выручки более 400&nbsp;млн. руб или стоимость активов за&nbsp;год более 60&nbsp;млн. Есть и&nbsp;другие случаи, когда аудит обязателен. Если ваша компания подпадает под один из&nbsp;этих критериев, позвоните нам или оставьте заявку на&nbsp;оказание услуги в&nbsp;форме обратной связи. Мы&nbsp;сможем компетентно и&nbsp;обоснованно заявить о&nbsp;правильности ведения учета и&nbsp;достоверности финансовых результатов работы.
-											</div><a class="sWorkingProcess__our-services-btn" href="#"><span>Наши услуги</span>
+											<p>Обязательный аудит требуется для многих предприятий&nbsp;&mdash; полный список условий описан в&nbsp;законодательства. К&nbsp;Ним, например относятся объем выручки более 400&nbsp;млн. руб или стоимость активов за&nbsp;год более 60&nbsp;млн. Есть и&nbsp;другие случаи, когда аудит обязателен. Если ваша компания подпадает под один из&nbsp;этих критериев, позвоните нам или оставьте заявку на&nbsp;оказание услуги в&nbsp;форме обратной связи. Мы&nbsp;сможем компетентно и&nbsp;обоснованно заявить о&nbsp;правильности ведения учета и&nbsp;достоверности финансовых результатов работы.</p><a class="sWorkingProcess__our-services-btn" href="#"><span>Наши услуги</span>
 											<svg class="icon icon-right-chevron ">
 												<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
 											</svg></a><a class="sWorkingProcess__send-aplication-btn" href="#"><span>Отправить заявку</span>
@@ -1221,8 +1050,7 @@
 										<div class="sWorkingProcess__slide-content">
 											<div class="sWorkingProcess__slide-headline d-none d-lg-block">Получаем заявку4
 											</div>
-											<div class="sWorkingProcess__slide-descr">Обязательный аудит требуется для многих предприятий&nbsp;&mdash; полный список условий описан в&nbsp;законодательства. К&nbsp;Ним, например относятся объем выручки более 400&nbsp;млн. руб или стоимость активов за&nbsp;год более 60&nbsp;млн. Есть и&nbsp;другие случаи, когда аудит обязателен. Если ваша компания подпадает под один из&nbsp;этих критериев, позвоните нам или оставьте заявку на&nbsp;оказание услуги в&nbsp;форме обратной связи. Мы&nbsp;сможем компетентно и&nbsp;обоснованно заявить о&nbsp;правильности ведения учета и&nbsp;достоверности финансовых результатов работы.
-											</div><a class="sWorkingProcess__our-services-btn" href="#"><span>Наши услуги</span>
+											<p>Обязательный аудит требуется для многих предприятий&nbsp;&mdash; полный список условий описан в&nbsp;законодательства. К&nbsp;Ним, например относятся объем выручки более 400&nbsp;млн. руб или стоимость активов за&nbsp;год более 60&nbsp;млн. Есть и&nbsp;другие случаи, когда аудит обязателен. Если ваша компания подпадает под один из&nbsp;этих критериев, позвоните нам или оставьте заявку на&nbsp;оказание услуги в&nbsp;форме обратной связи. Мы&nbsp;сможем компетентно и&nbsp;обоснованно заявить о&nbsp;правильности ведения учета и&nbsp;достоверности финансовых результатов работы.</p><a class="sWorkingProcess__our-services-btn" href="#"><span>Наши услуги</span>
 											<svg class="icon icon-right-chevron ">
 												<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
 											</svg></a><a class="sWorkingProcess__send-aplication-btn" href="#"><span>Отправить заявку</span>
@@ -1243,8 +1071,7 @@
 										<div class="sWorkingProcess__slide-content">
 											<div class="sWorkingProcess__slide-headline d-none d-lg-block">Получаем заявку5
 											</div>
-											<div class="sWorkingProcess__slide-descr">Обязательный аудит требуется для многих предприятий&nbsp;&mdash; полный список условий описан в&nbsp;законодательства. К&nbsp;Ним, например относятся объем выручки более 400&nbsp;млн. руб или стоимость активов за&nbsp;год более 60&nbsp;млн. Есть и&nbsp;другие случаи, когда аудит обязателен. Если ваша компания подпадает под один из&nbsp;этих критериев, позвоните нам или оставьте заявку на&nbsp;оказание услуги в&nbsp;форме обратной связи. Мы&nbsp;сможем компетентно и&nbsp;обоснованно заявить о&nbsp;правильности ведения учета и&nbsp;достоверности финансовых результатов работы.
-											</div><a class="sWorkingProcess__our-services-btn" href="#"><span>Наши услуги</span>
+											<p>Обязательный аудит требуется для многих предприятий&nbsp;&mdash; полный список условий описан в&nbsp;законодательства. К&nbsp;Ним, например относятся объем выручки более 400&nbsp;млн. руб или стоимость активов за&nbsp;год более 60&nbsp;млн. Есть и&nbsp;другие случаи, когда аудит обязателен. Если ваша компания подпадает под один из&nbsp;этих критериев, позвоните нам или оставьте заявку на&nbsp;оказание услуги в&nbsp;форме обратной связи. Мы&nbsp;сможем компетентно и&nbsp;обоснованно заявить о&nbsp;правильности ведения учета и&nbsp;достоверности финансовых результатов работы.</p><a class="sWorkingProcess__our-services-btn" href="#"><span>Наши услуги</span>
 											<svg class="icon icon-right-chevron ">
 												<use xlink:href="img/svg/sprite.svg#right-chevron"></use>
 											</svg></a><a class="sWorkingProcess__send-aplication-btn" href="#"><span>Отправить заявку</span>
@@ -1271,40 +1098,68 @@
 					<div class="our-exp-slider-container">
 						<div class="swiper-container our-exp-sw-cont-js">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide"><a class="our-exp-slider-container__img-block" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/our-exp-slider-1.jpg" alt=""/></a>
-									<div class="our-exp-slider-container__exp-name">Кузнецов Андрей
+								<div class="swiper-slide">
+									<div class="our-exp-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/our-exp-slider-1.jpg" alt=""/>
 									</div>
-									<ul class="our-exp-slider-container__exp-data-list">
-										<li><span>Должность:</span><span>Партнер</span></li>
-										<li><span>Компетенции:</span><span>Финансовый аудит</span></li>
-										<li><span>Опыт:</span><span>12 лет</span></li>
+									<p>Кузнецов Андрей</p>
+									<ul>
+										<li><span style="color: #7b7b7d;">Должность:</span>
+											Партнер
+										</li>
+										<li><span style="color: #7b7b7d;">Компетенции:</span>
+											Финансовый аудит
+										</li>
+										<li><span style="color: #7b7b7d;">Опыт:</span>
+											12 лет
+										</li>
 									</ul>
 								</div>
-								<div class="swiper-slide"><a class="our-exp-slider-container__img-block" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/our-exp-slider-2.jpg" alt=""/></a>
-									<div class="our-exp-slider-container__exp-name">Кузнецов Андрей
+								<div class="swiper-slide">
+									<div class="our-exp-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/our-exp-slider-2.jpg" alt=""/>
 									</div>
-									<ul class="our-exp-slider-container__exp-data-list">
-										<li><span>Должность:</span><span>Партнер</span></li>
-										<li><span>Компетенции:</span><span>Финансовый аудит</span></li>
-										<li><span>Опыт:</span><span>12 лет</span></li>
+									<p>Кузнецов Андрей</p>
+									<ul>
+										<li><span style="color: #7b7b7d;">Должность:</span>
+											Партнер
+										</li>
+										<li><span style="color: #7b7b7d;">Компетенции:</span>
+											Финансовый аудит
+										</li>
+										<li><span style="color: #7b7b7d;">Опыт:</span>
+											12 лет
+										</li>
 									</ul>
 								</div>
-								<div class="swiper-slide"><a class="our-exp-slider-container__img-block" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/our-exp-slider-3.jpg" alt=""/></a>
-									<div class="our-exp-slider-container__exp-name">Кузнецов Андрей
+								<div class="swiper-slide">
+									<div class="our-exp-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/our-exp-slider-3.jpg" alt=""/>
 									</div>
-									<ul class="our-exp-slider-container__exp-data-list">
-										<li><span>Должность:</span><span>Партнер</span></li>
-										<li><span>Компетенции:</span><span>Финансовый аудит</span></li>
-										<li><span>Опыт:</span><span>12 лет</span></li>
+									<p>Кузнецов Андрей</p>
+									<ul>
+										<li><span style="color: #7b7b7d;">Должность:</span>
+											Партнер
+										</li>
+										<li><span style="color: #7b7b7d;">Компетенции:</span>
+											Финансовый аудит
+										</li>
+										<li><span style="color: #7b7b7d;">Опыт:</span>
+											12 лет
+										</li>
 									</ul>
 								</div>
-								<div class="swiper-slide"><a class="our-exp-slider-container__img-block" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/our-exp-slider-4.jpg" alt=""/></a>
-									<div class="our-exp-slider-container__exp-name">Кузнецов Андрей
+								<div class="swiper-slide">
+									<div class="our-exp-slider-container__img-block"><img class="swiper-lazy" src="#" data-src="img/@2x/our-exp-slider-4.jpg" alt=""/>
 									</div>
-									<ul class="our-exp-slider-container__exp-data-list">
-										<li><span>Должность:</span><span>Партнер</span></li>
-										<li><span>Компетенции:</span><span>Финансовый аудит</span></li>
-										<li><span>Опыт:</span><span>12 лет</span></li>
+									<p>Кузнецов Андрей</p>
+									<ul>
+										<li><span style="color: #7b7b7d;">Должность:</span>
+											Партнер
+										</li>
+										<li><span style="color: #7b7b7d;">Компетенции:</span>
+											Финансовый аудит
+										</li>
+										<li><span style="color: #7b7b7d;">Опыт:</span>
+											12 лет
+										</li>
 									</ul>
 								</div>
 							</div>
@@ -1380,9 +1235,9 @@
 										</svg>
 									</div>
 								</div>
-								<div class="sFAQ__responce-bl">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.1
+								<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.1
 									<!--itemResponse-->
-								</div>
+								</p>
 							</div>
 							<div class="sFAQ__faq-item-cont">
 								<div class="sFAQ__faq-item-headline">
@@ -1397,9 +1252,9 @@
 										</svg>
 									</div>
 								</div>
-								<div class="sFAQ__responce-bl">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
+								<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.
 									<!--itemResponse-->
-								</div>
+								</p>
 							</div>
 							<div class="sFAQ__faq-item-cont">
 								<div class="sFAQ__faq-item-headline">
@@ -1414,9 +1269,9 @@
 										</svg>
 									</div>
 								</div>
-								<div class="sFAQ__responce-bl">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.5
+								<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.5
 									<!--itemResponse-->
-								</div>
+								</p>
 							</div>
 							<div class="sFAQ__faq-item-cont">
 								<div class="sFAQ__faq-item-headline">
@@ -1431,9 +1286,9 @@
 										</svg>
 									</div>
 								</div>
-								<div class="sFAQ__responce-bl">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.7
+								<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.7
 									<!--itemResponse-->
-								</div>
+								</p>
 							</div>
 						</div>
 						<div class="col-12 col-lg-6">
@@ -1450,9 +1305,9 @@
 										</svg>
 									</div>
 								</div>
-								<div class="sFAQ__responce-bl">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.2
+								<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.2
 									<!--itemResponse-->
-								</div>
+								</p>
 							</div>
 							<div class="sFAQ__faq-item-cont">
 								<div class="sFAQ__faq-item-headline">
@@ -1467,9 +1322,9 @@
 										</svg>
 									</div>
 								</div>
-								<div class="sFAQ__responce-bl">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.4
+								<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.4
 									<!--itemResponse-->
-								</div>
+								</p>
 							</div>
 							<div class="sFAQ__faq-item-cont">
 								<div class="sFAQ__faq-item-headline">
@@ -1484,9 +1339,9 @@
 										</svg>
 									</div>
 								</div>
-								<div class="sFAQ__responce-bl">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.6
+								<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.6
 									<!--itemResponse-->
-								</div>
+								</p>
 							</div>
 							<div class="sFAQ__faq-item-cont">
 								<div class="sFAQ__faq-item-headline">
@@ -1501,9 +1356,9 @@
 										</svg>
 									</div>
 								</div>
-								<div class="sFAQ__responce-bl">В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.8
+								<p>В текущих условиях для компаний особенно важно минимизировать риски недобросовестных действий и получить объективную информацию.8
 									<!--itemResponse-->
-								</div>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -1528,10 +1383,10 @@
 							<input class="utm_medium" type="hidden" name="utm_medium"/>
 							<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 							<div class="form-wrap__inputs-cont">
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" step="" name="name_inp" required="required"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="name_inp" required="required"/>
 								</div>
 								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш e-mail" step="" name="email_inp" required="required"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш e-mail" name="email_inp" required="required"/>
 								</div>
 								<!-- +e.input-wrap-->
 							</div>
@@ -1557,25 +1412,13 @@
 				<div class="container">
 					<div class="row">
 						<div class="footer__social-col col-12 col-md-6 col-xl-3">
-							<div class="footer__social-icons"><a class="footer__social-item" href="#">
-								<svg class="icon icon-footer-soc-inst ">
-									<use xlink:href="img/svg/sprite.svg#footer-soc-inst"></use>
-								</svg></a><a class="footer__social-item" href="#">
-								<svg class="icon icon-footer-soc-inst ">
-									<use xlink:href="img/svg/sprite.svg#footer-soc-inst"></use>
-								</svg></a><a class="footer__social-item" href="#">
-								<svg class="icon icon-footer-soc-inst ">
-									<use xlink:href="img/svg/sprite.svg#footer-soc-inst"></use>
-								</svg></a><a class="footer__social-item" href="#">
-								<svg class="icon icon-footer-soc-inst ">
-									<use xlink:href="img/svg/sprite.svg#footer-soc-inst"></use>
-								</svg></a>
+							<div class="footer__social-icons"><a class="footer__social-item" href="#"><i class="fab fa-facebook-f icon"></i></a><a class="footer__social-item" href="#"><i class="fab fa-twitter icon"></i></a><a class="footer__social-item" href="#"><i class="fab fa-vk icon"></i></a><a class="footer__social-item" href="#"><i class="fab fa-instagram icon"></i></a>
 							</div>
 							<div class="footer__all-rights d-none d-md-block">Все права защищены, © 2020
 							</div>
 						</div>
 						<div class="footer__footer-mnu-col col-12 col-md-6 col-xl-3">
-							<ul class="footer__footer-menu">
+							<ul>
 								<li><a href="#">Запрос на оказание услуг</a></li>
 								<li><a href="#">Обратная связь</a></li>
 								<li><a href="#">Информационный ресурс</a></li>
@@ -1583,7 +1426,7 @@
 							</ul>
 						</div>
 						<div class="footer__usefull-links-col col-12 col-md-12 col-xl-6">
-							<ul class="footer__usefull-links-list">
+							<ul>
 								<li><a href="#">Карта сайта</a></li>
 								<li><a href="#">Политика ООО «ИНПАЗЛ» в отношении обработки персональных данных</a></li>
 								<li><a href="#">Согласие посетителя веб-сайта ООО «ИНПАЗЛ»</a></li>
@@ -1610,10 +1453,10 @@
 						</div>
 						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" step="" name="text" required="required"/> 
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" step="" name="tel" required="required"/>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
 					</div>
 					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
 					<div class="form-wrap__polite">

@@ -75,6 +75,28 @@
 				}
 			}
 		}
+
+		//&__responce-bl
+		p {
+			margin-bottom: 0;
+			color: $secondary;
+			font-size: 12px;
+			line-height: 22px;
+
+			padding: 20px;
+			@include media-breakpoint-up(sm){
+				padding: 23px 30px 23px 30px;
+			}
+			@include media-breakpoint-up(xl){
+				padding: 23px 100px 23px 30px;
+			}
+
+
+			display: none;
+			&.active{
+				display: block;
+			}
+		}
 	}
 	&__faq-item-headline{
 		background-color: $light;
@@ -152,25 +174,7 @@
 			opacity: 0;
 		}
 	}
-	&__responce-bl{
-		color: $secondary;
-		font-size: 12px;
-		line-height: 22px;
 
-		padding: 20px;
-		@include media-breakpoint-up(sm){
-			padding: 23px 30px 23px 30px;
-		}
-		@include media-breakpoint-up(xl){
-			padding: 23px 100px 23px 30px;
-		}
-
-
-		display: none;
-		&.active{
-			display: block;
-		}
-	}
 	&__{}
 	&__{}
 	@include media-breakpoint-up(xl) {}
