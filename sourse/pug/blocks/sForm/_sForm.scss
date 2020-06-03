@@ -203,22 +203,29 @@
 				}
 				&:after{
 					position: absolute;
-					left: 12px;
-					@include media-breakpoint-up(sm){
-						left: 15px;
-					}
+					left: 0;
 
-					transform: translateY(-50%) translateX(-50%);
+					transform: translateY(-50%);
 					@include media-breakpoint-up(xl){
-						transform: translateY(-40%) translateX(-50%);
+						transform: translateY(-40%);
 					}
 
 					top: 50%;
-					content: '✓';
+					content: '';
 					font-size: 16px;
 					color: $danger;
 					opacity: 0;
 					@include mt();
+
+					width: 24px;
+					height: 24px;
+					@include media-breakpoint-up(sm){
+						width: 30px;
+						height: 30px;
+					}
+
+					background-image: url(../img/@2x/checkbox-icon.png);
+					background-size: cover;
 				}
 
 
