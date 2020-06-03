@@ -13,11 +13,14 @@ mixin sForm()
 					+input('Ваш e-mail', 'email', undefined, 'email_inp')(required)
 				+input('Ваше сообщение', 'textarea', undefined, 'message_ta')
 				+e.personalA-and-submit-cont
-					+e.LABEL.personal-data-agreement
-						input.hidden-checkbox(type="checkbox" checked="checked")
-						span.custom-checkbox-cont
-							+icon('check')
-						span.checkbox-description Согласен на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями
+					+e.polite
+						span.wpcf7-form-control-wrap.acceptance-133
+							span.wpcf7-form-control.wpcf7-acceptance
+								span.wpcf7-list-item
+									label
+										input(type="checkbox" checked="checked" name='acceptance-133' aria-invalid="false" value='1')
+										span.wpcf7-list-item-label
+											| Согласен на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями
 					+e.BUTTON.send-btn(type='submit') Отправить
 
 

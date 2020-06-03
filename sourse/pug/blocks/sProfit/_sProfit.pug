@@ -21,8 +21,8 @@ mixin profitItem(bgImgNum='1', svgImgNum='1', headlineTxt='Более 10 лет 
 			img.lazy(src="#" data-src=`img/@2x/profit-img-${bgImgNum}.jpg` alt="")
 		+e.A.profit-item
 			+e.inner-img
-				img.blue-img(src=`img/profit-${svgImgNum}.svg` alt="")
-				img.white-img(src=`img/profit-white-${svgImgNum}.svg` alt="")
+				//-img.blue-img(src=`img/profit-${svgImgNum}.svg` alt="")
+				img.white-img.img-svg-js(src=`img/profit-white-${svgImgNum}.svg` alt="")
 			h6=headlineTxt
 			p=descrTxt
 			//-+e.profit-item-number=itemNum

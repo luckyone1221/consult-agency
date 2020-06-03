@@ -52,6 +52,14 @@
 			margin-bottom: 45px;
 		}
 
+		&:hover{
+			.white-img{
+				path{
+					fill: $white !important;
+				}
+			}
+		}
+
 	}
 	&__bg-img{
 		//display: none;
@@ -86,14 +94,6 @@
 		}
 		&:hover{
 			background-color: transparent;
-			.sProfit__inner-img{
-				img.blue-img{
-					opacity: 0;
-				}
-				img.white-img{
-					opacity: 1;
-				}
-			}
 			//.sProfit__profit-headline
 			h6{
 				color: $white;
@@ -135,23 +135,23 @@
 		@include media-breakpoint-up(sm){
 			margin-bottom: 28px;
 		}
-		img{
+		.white-img{
 			position: absolute;
 			top: 0;
-			left: calc(50% - 42.5px);
+			left: 50%;
+			transform: translateX(-50%);
 			margin: auto;
 			width: 85px;
 			height: auto;
 			max-height: 100%;
 
 			@include mt();
-			&.blue-img{
-				opacity: 1;
+
+			path{
+				fill: $primary !important;
+				@include mt();
 			}
-			&.white-img{
-				opacity: 0;
-				//left: 0;
-			}
+			//
 		}
 	}
 	//&__profit-headline
